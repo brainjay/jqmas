@@ -23,7 +23,7 @@
         })
     </script>
 
-
+<!--
     <div data-role="page" id="home" class="bg">
 
 
@@ -39,6 +39,99 @@
         </div>
 
     </div>
+-->
+
+    <!--############################### -->
+    <!-- ***** page 1 ***** -->
+    <div data-role="page" id="p1" class="bg box">
+
+        <div data-role="main" class="ui-content" id="content">
+            <div class="videoWrapper">
+
+                <video width="300" height="200" autoplay="autoplay" loop>
+                    <source src="../animationen-Starscreen/video-1440875666.mp4.mp4" type="video/mp4" />
+                </video>
+
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false"> <span class="ui-title">
+        <div id="navigator">
+            <a href="#p1"  class="activeSlide">1</a>
+            <a href="#p2">2</a>
+            <a href="#p3">3</a>
+
+        </div>
+        </span>
+
+        </div>
+    </div>
+    <!-- ***** page 2 ***** -->
+    <div data-role="page" id="p2" class="bg box">
+
+        <div data-role="main" class="ui-content" id="content">
+            <div class="videoWrapper">
+
+                <video width="300" height="200" autoplay="autoplay" loop>
+                    <source src="../animationen-Starscreen/video-1440875690.mp4.mp4" type="video/mp4" />
+                </video>
+
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false"> <span class="ui-title">
+        <div id="navigator">
+            <a href="#p1">1</a>
+            <a href="#p2" class="activeSlide">2</a>
+            <a href="#p3">3</a>
+
+        </div>
+        </span>
+
+        </div>
+    </div>
+    <!-- ***** page 3 ***** -->
+    <div data-role="page" id="p3" class="bg box te">
+
+        <div data-role="main" class="ui-content" id="content">
+            <div class="videoWrapper">
+
+                <video width="300" height="200" autoplay="autoplay" loop>
+                    <source src="../animationen-Starscreen/video-1440875721.mp4.mp4" type="video/mp4" />
+                </video>
+
+            </div>
+        </div>
+        <div data-role="footer" data-position="fixed" data-tap-toggle="false"> <span class="ui-title">
+        <div id="navigator">
+            <a href="#p1">1</a>
+            <a href="#p2">2</a>
+            <a href="#p3" class="activeSlide">3</a>
+
+        </div>
+        </span>
+
+        </div>
+    </div>
+
+    <!--############################### -->
+
+    <script>
+        <!--
+        $('div.box').on("swipeleft", function(){
+            var nextpage = $(this).next('div[data-role="page"]');
+            if (nextpage.length > 0) {
+                $.mobile.changePage(nextpage, {transition:'slide'});
+            }
+        });
+        $('div.box').on("swiperight", function(){
+            var prevpage = $(this).prev('div[data-role="page"]');
+            if (prevpage.length > 0) {
+                $.mobile.changePage(prevpage, {transition:'slide', reverse:true});
+            }
+        });
+        // -->
+    </script>
+
+
         <script type="text/javascript" src="cordova.js"></script>
 
     </body>
