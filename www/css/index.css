@@ -120,11 +120,13 @@ h1 {
 }
 
 .bg {
-    background: url("../img/background/hintergrund-neutral.jpg") no-repeat 0 0%;
+    background: url("../img/background/hintergrund-neutral.jpg");
+    background-size:cover
+
 }
 
 .sus{
-    background-image: url("../img/icons/schenken-und-spenden.png") !important;
+    background-image: url("../img/icons-neu/schenken-und-spenden.png") !important;
     background-color: transparent !important;
     height: 132.5px;
     display:block;
@@ -134,6 +136,7 @@ h1 {
     background-size: 145px;
     background-repeat: no-repeat;
     border-width: 0 0 1px 0 !important;
+
 }
 
 .tht{
@@ -144,59 +147,59 @@ h1 {
     margin: 0 auto;
     background-position: center;
     background-clip:content-box;
-    background-size: 115px;
+    background-size: 110px;
     background-repeat: no-repeat;
     border-width: 0 0 1px 1px !important;
 }
 
 .thb{
-    background-image: url("../img/icons/tierheim-berg.png") !important;
+    background-image: url("../img/icons-neu/tierheim-berg.png") !important;
     background-color: transparent !important;
     height: 132.5px;
     display:block;
     margin: 0 auto;
     background-position: center;
     background-clip:content-box;
-    background-size: 95px;
+    background-size: 190px;
     background-repeat: no-repeat;
     border-width: 0 0 1px 0 !important;
 }
 
 .sof{
-    background-image: url("../img/icons/so-dunktionierts.png") !important;
+    background-image: url("../img/icons-neu/so-dunktionierts.png") !important;
     background-color: transparent !important;
     height: 132.5px;
     display:block;
     margin: 0 auto;
     background-position: center;
     background-clip:content-box;
-    background-size: 118px;
+    background-size: 190px;
     background-repeat: no-repeat;
     border-width: 0 0 1px 1px !important;
 }
 
 .mg{
-    background-image: url("../img/icons/meine-geschenke.png") !important;
+    background-image: url("../img/icons-neu/meine-geschenke.png") !important;
     background-color: transparent !important;
     height: 132.5px;
     display:block;
     margin: 0 auto;
     background-position: center;
     background-clip:content-box;
-    background-size: 105px;
+    background-size: 190px;
     background-repeat: no-repeat;
     border-width: 0 0 0px 0 !important;
 }
 
 .mpt{
-    background-image: url("../img/icons/mein-patentier.png") !important;
+    background-image: url("../img/icons-neu/mein-patentier.png") !important;
     background-color: transparent !important;
     height: 132.5px;
     display:block;
     margin: 0 auto;
     background-position: center;
     background-clip:content-box;
-    background-size: 105px;
+    background-size: 190px;
     background-repeat: no-repeat;
     border-width: 0 0 0px 1px !important;
 }
@@ -282,8 +285,201 @@ h1 {
     }
 }
 
+@media screen and (min-height: 800px) {
+
+    .sus{
+        background-image: url("../img/icons/schenken-und-spenden.png") !important;
+        background-color: transparent !important;
+        height: 229px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 230px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .tht{
+        background-image: url("../img/icons/tierheimtiere.png") !important;
+        background-color: transparent !important;
+        height: 229px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 184px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+    .thb{
+        background-image: url("../img/icons/tierheim-berg.png") !important;
+        background-color: transparent !important;
+        height: 229px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 155px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .sof{
+        background-image: url("../img/icons/so-dunktionierts.png") !important;
+        background-color: transparent !important;
+        height: 229px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 182px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+    .mg{
+        background-image: url("../img/icons/meine-geschenke.png") !important;
+        background-color: transparent !important;
+        height: 229px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 190px;
+        background-repeat: no-repeat;
+        border-width: 0 0 0 0 !important;
+    }
+
+    .mpt{
+        background-image: url("../img/icons/mein-patentier.png") !important;
+        background-color: transparent !important;
+        height: 229px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 190px;
+        background-repeat: no-repeat;
+        border-width: 0 0 0 1px !important;
+    }
+}
+
+@media screen and (min-height: 1100px) {
+
+    .sus{
+        background-image: url("../img/icons/schenken-und-spenden.png") !important;
+        background-color: transparent !important;
+        height: 389px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 310px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .tht{
+        background-image: url("../img/icons/tierheimtiere.png") !important;
+        background-color: transparent !important;
+        height: 389px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 252px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+    .thb{
+        background-image: url("../img/icons/tierheim-berg.png") !important;
+        background-color: transparent !important;
+        height: 389px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 212px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .sof{
+        background-image: url("../img/icons/so-dunktionierts.png") !important;
+        background-color: transparent !important;
+        height: 389px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 262px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+    .mg{
+        background-image: url("../img/icons/meine-geschenke.png") !important;
+        background-color: transparent !important;
+        height: 389px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 236px;
+        background-repeat: no-repeat;
+        border-width: 0 0 0 0 !important;
+    }
+
+    .mpt{
+        background-image: url("../img/icons/mein-patentier.png") !important;
+        background-color: transparent !important;
+        height: 389px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 236px;
+        background-repeat: no-repeat;
+        border-width: 0 0 0 1px !important;
+    }
+}
+
 .no-margin{
     margin: 0 !important;
+}
+
+@font-face{
+    font-family: 'FiraSans-Light';
+    src: url(../fonts/FiraSans-Light.otf);
+}
+
+@font-face{
+    font-family: 'FiraSans-Hair';
+    src: url(../fonts/FiraSans-Hair.otf);
+}
+
+.intro{
+    font-family: FiraSans-Hair;
+    font-weight: 500;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+    text-transform: none !important;
+}
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.fadding{
+    transition: all 2s ease-in-out;
 }
 
 #content {

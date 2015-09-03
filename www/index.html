@@ -16,35 +16,27 @@
     </head>
     <body>
 
+    <script>
+
+        $(function(){
+            $("body").hide();
+            $("body").fadeIn(2000);
+            setTimeout(function(){
+                $("body").fadeOut(1000,function(){
+                    window.location.href = "pages/menu.html"
+                })
+            },3500)
+        });
+
+    </script>
 
 
-    <div data-role="page" id="home" class="bg">
-        <div data-role="header" class="custom-header">
-            <h1>Men&uuml;</h1>
-        </div>
+    <div data-role="page" id="home" class="bg fading">
 
-        <div data-role="main" class="ui-content bg" id="content">
+        <div data-role="main" class="ui-content bg" id="">
 
-            <div class="ui-grid-a">
-                <div class="ui-block-a">
-                    <a class="ui-shadow ui-btn sus no-margin"></a>
-                </div>
-                <div class="ui-block-b">
-                    <a class="ui-shadow ui-btn tht no-margin"></a>
-                </div>
-                <div class="ui-block-a">
-                    <a class="ui-shadow ui-btn thb no-margin"></a>
-                </div>
-                <div class="ui-block-b">
-                    <a class="ui-shadow ui-btn sof no-margin"></a>
-                </div>
-                <div class="ui-block-a">
-                    <a class="ui-shadow ui-btn mg no-margin"></a>
-                </div>
-                <div class="ui-block-b">
-                    <a class="ui-shadow ui-btn mpt no-margin"></a>
-                </div>
-            </div><!-- /grid-a -->
+            <img class="logo" src="img/icons/logo-pfotenhilfe.png">
+            <p class="intro">Pfotenhilfe</p>
 
         </div>
 
