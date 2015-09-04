@@ -122,7 +122,8 @@ h1 {
 
 .bg {
     background: url("../img/background/hintergrund-neutral.jpg");
-    background-size:cover
+ /*   background-size:cover;
+    background-repeat: no-repeat;*/
 
 }
 
@@ -484,9 +485,6 @@ h1 {
     height: auto;
 }
 
-.fadding{
-    transition: all 2s ease-in-out;
-}
 
 #content {
     padding: 0;
@@ -506,6 +504,7 @@ h1 {
 
 .videoWrapper video {
     position: absolute;
+    display: block;
     top: 0;
     left: 0;
     width: 100%;
@@ -527,12 +526,34 @@ h1 {
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
-    box-shadow: 0 0 1px 1px #707173;
+    box-shadow: 0 0 1px 1px rgba(255,255,255,0.4);
     margin-right: 10px;
 }
 #navigator a {
-    background: #00ffff;
+    background: rgba(255,255,255,0.3);
+    box-shadow: 0 0 1px 1px rgba(255,255,255,0.4);
 }
 #navigator a.activeSlide {
-    background: #ff8000;
+    background: rgba(255,255,255,1);
+    box-shadow: 0 0 1px 1px rgba(255,255,255,1);
+}
+
+.pos{
+    -webkit-transform: translateZ(0);
+    position:fixed;
+}
+
+.no-border{
+    border-style:none !important;
+}
+
+.linie{
+    border-top-style: solid !important;
+    border-top-color: white;
+    border-width: thin;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
+    padding-bottom: 25px !important;
+    padding-top: 25px !important;
+
 }
