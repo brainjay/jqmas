@@ -122,13 +122,28 @@ h1 {
 
 .bg {
     background: url("../img/background/hintergrund-neutral.jpg");
- /*   background-size:cover;
-    background-repeat: no-repeat;*/
-
+    background-size:auto;
 }
 
+.bg-cat {
+    background: url("../img/background/Hintergrund-Katze.jpg");
+    background-size:auto;
+}
+
+.bg-dog {
+    background: url("../img/background/Hintergrund-Hund.jpg");
+    background-size:auto;
+}
+
+.bg-rabbit {
+    background: url("../img/background/Hintergrund-Kleintiere.jpg");
+    background-size:auto;
+}
+
+
+
 .sus{
-    background-image: url("../img/icons-neu/schenken-und-spenden.png") !important;
+    background-image: url("../img/icons-neu/schenken-und-spenden.png")!important;
     background-color: transparent !important;
     height: 132.5px;
     display:block;
@@ -498,7 +513,7 @@ h1 {
 .videoWrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
-    padding-top: 25px;
+    padding-top: 90px;
     height: 0;
 }
 
@@ -547,6 +562,10 @@ h1 {
     border-style:none !important;
 }
 
+.ui-page-header-fixed{
+    padding-top: 3.5em !important;
+}
+
 .linie{
     border-top-style: solid !important;
     border-top-color: white;
@@ -555,5 +574,55 @@ h1 {
     margin-right: 30px !important;
     padding-bottom: 25px !important;
     padding-top: 25px !important;
+
+}
+
+/* #container div with absolute position and 100% width and height so it takes up whole window */
+#container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.dog-txt {
+    text-transform: none;
+    font-family: FiraSans-Light;
+    color: white;
+    width: 175px;
+    margin: 25px auto;
+    text-shadow: none !important;
+
+}
+
+.cat-txt{
+    text-transform: none;
+    font-family: FiraSans-Light;
+    color: white;
+    width: 290px;
+    margin: 25px auto;
+    text-shadow: none !important;
+
+}
+
+.rabbit-txt{
+    text-transform: none;
+    font-family: FiraSans-Light;
+    color: white;
+    width: 290px;
+    margin: 25px auto;
+    text-shadow: none !important;
+
+}
+
+.btn-pos{
+    margin: 50px auto!important;
+    width: 200px;
+}
+
+.btn-style{
+    color:red!important;
+    font-size: large;
+    border-radius: 7px;
+
 
 }
