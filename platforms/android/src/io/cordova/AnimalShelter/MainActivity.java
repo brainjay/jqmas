@@ -21,14 +21,22 @@ package io.cordova.AnimalShelter;
 
 import android.os.Bundle;
 import org.apache.cordova.*;
+import android.webkit.WebSettings;
+import android.view.ViewGroup;
+import android.webkit.WebView;
 
 public class MainActivity extends CordovaActivity
 {
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
+
         super.onCreate(savedInstanceState);
+        super.init();
         // Set by <content src="index.html" /> in config.xml
         loadUrl(launchUrl);
+
+        WebView wv = (WebView)super.appView.getEngine().getView();
+        wv.getSettings().setMediaPlaybackRequiresUserGesture(false);
     }
 }
