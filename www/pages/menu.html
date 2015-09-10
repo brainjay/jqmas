@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta name="format-detection" content="telephone=no">
+        <meta charset="UTF-8">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="../css/index.css">
@@ -33,36 +34,83 @@
 
             <div id="overlay"class="callout bottom">
                 <p id="popup-text">Mach uns ein Geschenk und hilf so dem Tierheim Berg</p>
-                <a class="ui-shadow ui-btn popup-btn">weiter</a>
+                <a id="btn-popup" who-is="one" class="ui-shadow ui-btn popup-btn">weiter</a>
             </div>
 
             <div class="ui-grid-a">
-                <div class="ui-block-a">
+                <div id="eins" class="ui-block-a">
                     <a class="ui-shadow ui-btn sus no-margin"></a>
                 </div>
-                <div class="ui-block-b grey transparent">
+                <div id="zwei" class="ui-block-b grey transparent">
                     <a class="ui-shadow ui-btn tht no-margin"></a>
                 </div>
-                <div class="ui-block-a grey transparent">
+                <div id="drei" class="ui-block-a grey transparent">
                     <a class="ui-shadow ui-btn thb no-margin"></a>
                 </div>
-                <div class="ui-block-b grey transparent">
+                <div id="vier" class="ui-block-b grey transparent">
                     <a class="ui-shadow ui-btn sof no-margin"></a>
                 </div>
-                <div class="ui-block-a grey transparent">
+                <div id="fuenf" class="ui-block-a grey transparent">
                     <a class="ui-shadow ui-btn mg no-margin"></a>
                 </div>
-                <div class="ui-block-b grey transparent">
+                <div id="sechs" class="ui-block-b grey transparent">
                     <a class="ui-shadow ui-btn mpt no-margin"></a>
                 </div>
             </div><!-- /grid-a -->
 
 
-
         </div>
 
     </div>
-        <script type="text/javascript" src="cordova.js"></script>
+
+    <script>
+        $("#btn-popup").on("click", function(event){
+            if($(this).context.attributes[1].value == "one"){
+
+                $("#popup-text").text("Hier kannst du alle Tiere besuchen, die aktuell in dem Tierheim wohnen");
+                $("#eins").addClass('grey transparent');
+                $("#zwei").removeClass('grey transparent');
+                $(this).attr('who-is','two');
+
+            }else if ($(this).context.attributes[1].value == "two"){
+                $("#popup-text").text("Was das Tierheim Berg alles leistet erfährst du hier");
+                $("#zwei").addClass('grey transparent');
+                $("#drei").removeClass('grey transparent');
+                $(this).attr('who-is','three');
+
+            }else if ($(this).context.attributes[1].value == "three"){
+                $("#popup-text").text("Hier kannst du genau nachlesen wie die App funktioniert");
+                $("#drei").addClass('grey transparent');
+                $("#vier").removeClass('grey transparent');
+                $(this).attr('who-is','four');
+
+            }else if ($(this).context.attributes[1].value == "four"){
+                $("#popup-text").text("Was du schon alles gespendet hast, siehst du hier");
+                $("#vier").addClass('grey transparent');
+                $("#fuenf").removeClass('grey transparent');
+                $(this).attr('who-is','five');
+
+            }else if ($(this).context.attributes[1].value == "five"){
+                $("#popup-text").text("Wenn du Pate werden willst schau hier vorbei!");
+                $("#fuenf").addClass('grey transparent');
+                $("#sechs").removeClass('grey transparent');
+                $(this).attr('who-is','exit');
+                $(this).text("Fertig!")
+
+            }else if ($(this).context.attributes[1].value == "exit"){
+                $("#eins").removeClass('grey transparent');
+                $("#zwei").removeClass('grey transparent');
+                $("#drei").removeClass('grey transparent');
+                $("#vier").removeClass('grey transparent');
+                $("#fuenf").removeClass('grey transparent');
+                $("#overlay").hide();
+
+            }
+
+        });
+    </script>
+
+     <script type="text/javascript" src="cordova.js"></script>
 
     </body>
 </html>

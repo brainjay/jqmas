@@ -750,6 +750,14 @@ h1 {
 
 }
 
+.popup-btn{
+    margin-top: 20px !important;
+    background-color: transparent!important;
+    color: #FFF !important;
+    text-shadow: none !important;
+    border-radius: 5px;
+}
+
 div.callout {
     width: 200px;
     float: left;
