@@ -33,7 +33,7 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide bg-dog" style="background-color:transparent !important;">
-                            <div class="ui-grid-b toppadding">
+                            <div class="ui-grid-b toppadding" id="padding-dog">
                                 <img src="../img/gif/dog.gif" class="images">
                             </div>
                             <div class="dog-txt">
@@ -45,30 +45,30 @@
                             </div>
                         </div>
                         <div class="swiper-slide bg-rabbit" style="background-color:transparent !important;">
-                            <div class="ui-grid-b toppadding">
+                            <div class="ui-grid-b toppadding" id="padding-rabbit">
                                 <img src="../img/gif/rabbit.gif" class="images">
                             </div>
-                            <div class="dog-txt">
+                            <div class="rabbit-txt">
                                 <p style="text-align: center">
-                                    Wusstest du, dass jedes zweite
-                                    Tierheim vor dem Aus steht?
-                                    Das wollen wir &auml;ndern!
+                                    Mit einem kleinen Geschenk kannst
+                                    du den Tieren eine gro&szlig;e Freude machen
+                                    und unterst&uuml;tzt gleichzeitig das Tierheim.
                                 </p>
                             </div>
                         </div>
                         <div class="swiper-slide bg-cat" style="background-color:transparent !important;">
-                            <div class="ui-grid-b toppadding">
+                            <div class="ui-grid-b toppadding" id="padding-cat">
                                 <img src="../img/gif/cat.gif" class="images">
                             </div>
-                            <div class="dog-txt">
+                            <div class="cat-txt">
                                 <p style="text-align: center">
-                                    Wusstest du, dass jedes zweite
-                                    Tierheim vor dem Aus steht?
-                                    Das wollen wir &auml;ndern!
+                                    Du kannst beispielsweise Zeit, Nahrung
+                                    oder Gesundheit schenken und uns
+                                    damit eine gro&szlig;e Freunde machen.
                                 </p>
                             </div>
                             <div class="ui-grid-b">
-                               <a href="../pages/menu.html" data-role="button">Link button</a>
+                               <a href="../pages/menu.html" class="ui-shadow ui-btn no-margin btn-goto-menu"></a>
                             </div>
 
                         </div>
@@ -93,7 +93,7 @@
             switch(orientation){
                 case 'portrait':
                     // alert('portrait');
-                    $('#myFooter').show();
+
                     break;
                 case 'landscape':
                     // alert('landscape');
@@ -103,6 +103,19 @@
                     break;
             };
         });
+    </script>
+
+    <script>
+        var app = document.URL.indexOf( 'http://' ) === -1 && document.URL.indexOf( 'https://' ) === -1;
+        if ( app ) {
+            // PhoneGap application
+            $('#padding-dog').removeClass("top-padding").addClass("smart-padding-top");
+            $('#padding-cat').removeClass("top-padding").addClass("smart-padding-top");
+            $('#padding-rabbit').removeClass("top-padding").addClass("smart-padding-top");
+
+        } else {
+
+        }
     </script>
 
     <script>

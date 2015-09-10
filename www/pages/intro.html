@@ -33,7 +33,7 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide bg-dog" style="background-color:transparent !important;">
-                            <div class="ui-grid-b toppadding">
+                            <div class="ui-grid-b toppadding" id="padding-dog">
                                 <img src="../img/gif/dog.gif" class="images">
                             </div>
                             <div class="dog-txt">
@@ -45,7 +45,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide bg-rabbit" style="background-color:transparent !important;">
-                            <div class="ui-grid-b toppadding">
+                            <div class="ui-grid-b toppadding" id="padding-rabbit">
                                 <img src="../img/gif/rabbit.gif" class="images">
                             </div>
                             <div class="rabbit-txt">
@@ -57,7 +57,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide bg-cat" style="background-color:transparent !important;">
-                            <div class="ui-grid-b toppadding">
+                            <div class="ui-grid-b toppadding" id="padding-cat">
                                 <img src="../img/gif/cat.gif" class="images">
                             </div>
                             <div class="cat-txt">
@@ -93,7 +93,7 @@
             switch(orientation){
                 case 'portrait':
                     // alert('portrait');
-                    $('#myFooter').show();
+
                     break;
                 case 'landscape':
                     // alert('landscape');
@@ -103,6 +103,19 @@
                     break;
             };
         });
+    </script>
+
+    <script>
+        var app = document.URL.indexOf( 'http://' ) === -1 && document.URL.indexOf( 'https://' ) === -1;
+        if ( app ) {
+            // PhoneGap application
+            $('#padding-dog').removeClass("top-padding").addClass("smart-padding-top");
+            $('#padding-cat').removeClass("top-padding").addClass("smart-padding-top");
+            $('#padding-rabbit').removeClass("top-padding").addClass("smart-padding-top");
+
+        } else {
+
+        }
     </script>
 
     <script>

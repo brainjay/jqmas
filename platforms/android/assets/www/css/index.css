@@ -140,6 +140,19 @@ h1 {
     background-size:auto;
 }
 
+.btn-goto-menu{
+    background-image: url("../img/icons/button-lass-uns-helfen.png") ;
+    background-color: transparent !important;
+    height: 55px;
+    display:block;
+    margin: 0 auto;
+    background-position: center;
+    background-clip:content-box;
+    background-size: 240px;
+    background-repeat: no-repeat;
+    border-style: none !important;
+}
+
 
 
 .sus{
@@ -594,7 +607,7 @@ h1 {
     text-transform: none;
     font-family: FiraSans-Light;
     color: white;
-    width: 290px;
+    width: 335px!important;
     margin: 25px auto;
     text-shadow: none !important;
 
@@ -604,7 +617,7 @@ h1 {
     text-transform: none;
     font-family: FiraSans-Light;
     color: white;
-    width: 290px;
+    width: 335px;
     margin: 25px auto;
     text-shadow: none !important;
 
@@ -661,12 +674,16 @@ h1 {
     position: initial !important;
     border-style: solid;
     border-width: 1px 0 0 0;
-    padding: 20px 0px 15px 0px!important;
+    padding: 20px 0px 20px 0px!important;
+    border-color: white !important;
+    opacity: 0.7;
 }
 
 .swiper-pagination-bullet{
     margin: 0 3px !important;
+
 }
+
 .swiper-slide {
     display: block !important;
 }
@@ -706,4 +723,96 @@ h1 {
     .spezial-btn {
         margin: -84px 15px 0 484px !important;
     }
+}
+
+.smart-padding-top{
+    padding-top:100px
+}
+
+
+.grey{
+    z-index: 10;
+    background: rgba(0, 0, 0, 1);
+}
+
+.transparent{
+    opacity: 0.35;
+}
+
+#overlay {
+    margin-top: 60%;
+    margin-left: 10%;
+    color: #fff;
+    text-align: center;
+    font-family: FiraSans-Light;
+    text-transform: none;
+    font-size: larger;
+
+}
+
+div.callout {
+    width: 200px;
+    float: left;
+}
+
+div.callout {
+    background-color: #444;
+    background-image: -moz-linear-gradient(top, #444, #444);
+    position: relative;
+    color: #ccc;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 20px #999;
+    margin: 25px;
+    min-height: 50px;
+    border: 1px solid #333;
+    text-shadow: 0 0 1px #000;
+    position: absolute;
+    z-index: 500;
+
+    /*box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;*/
+}
+
+.callout::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border: 0.8em solid transparent;
+    position: absolute;
+}
+
+.callout.top::before {
+    left: 45%;
+    bottom: -20px;
+    border-top: 10px solid #444;
+}
+
+.callout.bottom::before {
+    left: 45%;
+    top: -42px;
+    border-bottom: 30px solid #444;
+}
+
+.callout.left::before {
+    right: -20px;
+    top: 40%;
+    border-left: 10px solid #444;
+}
+
+.callout.right::before {
+    left: -20px;
+    top: 40%;
+    border-right: 10px solid #444;
+}
+
+.callout.top-left::before {
+    left: 7px;
+    bottom: -20px;
+    border-top: 10px solid #444;
+}
+
+.callout.top-right::before {
+    right: 7px;
+    bottom: -20px;
+    border-top: 10px solid #444;
 }
