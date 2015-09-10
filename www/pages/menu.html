@@ -12,7 +12,8 @@
         <script src="../lib/jquery/js/jquery-2.1.4.min.js" type="text/javascript"></script>
         <script src="../lib/jquery-mobile/js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
         <script type="text/javascript" src="../js/index.js"></script>
-        <title>Hello World</title>
+        <script type="text/javascript" src="../js/test.js"></script>
+        <title>Pfotenhilfe</title>
 
     </head>
     <body>
@@ -64,7 +65,8 @@
     </div>
 
     <script>
-        $("#btn-popup").on("click", function(event){
+
+       function handler(event){
             if($(this).context.attributes[1].value == "one"){
 
                 $("#popup-text").text("Hier kannst du alle Tiere besuchen, die aktuell in dem Tierheim wohnen");
@@ -106,11 +108,19 @@
                 $("#overlay").hide();
 
             }
+        }
 
-        });
     </script>
 
      <script type="text/javascript" src="cordova.js"></script>
+
+
+    <script>
+        $(document).on( "pagecreate", function( event ) { alert("ok") } )
+        $(document).on('click', '#btn-popup', handler);
+    </script>
+
+
 
     </body>
 </html>
