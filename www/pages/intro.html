@@ -1,169 +1,285 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="../css/index.css">
-        <link rel="stylesheet" type="text/css" href="../lib/swiper/dist/css/swiper.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../lib/swiper/dist/css/swiper.min.css">
 
 
-        <link rel="stylesheet" type="text/css" href="../lib/jquery-mobile/css/jquery.mobile-1.4.5.min.css">
-        <script src="../lib/jquery/js/jquery-2.1.4.min.js" type="text/javascript"></script>
-        <script src="../lib/jquery-mobile/js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
-        <script src="../lib/swiper/dist/js/swiper.jquery.min.js"></script>
-        <script type="text/javascript" src="../js/index.js"></script>
-        <title>Hello World</title>
+    <link rel="stylesheet" type="text/css" href="../lib/jquery-mobile/css/jquery.mobile-1.4.5.min.css">
+    <script src="../lib/jquery/js/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="../lib/jquery-mobile/js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+    <script src="../lib/swiper/dist/js/swiper.jquery.min.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <title>Pfotenhilfe</title>
 
-    </head>
-    <body>
+</head>
+<body>
 
-    <script>
-        $(function(){
-            $("body").hide();
-            $("body").fadeIn(1000);
-        })
-    </script>
+<script>
+    $(function(){
+        $("body").hide();
+        $("body").fadeIn(1000);
+    })
+</script>
 
-    <div id="container">
-        <div data-role="page" id="page" style="background-color: transparent !important;">
-            <div role="main" class="ui-content fullscreen" style="background-color:transparent !important;">
-                <!-- Swiper -->
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide bg-dog" style="background-color:transparent !important;">
-                            <div class="ui-grid-b toppadding" id="padding-dog">
-                                <img src="../img/gif/dog.gif" class="images">
-                            </div>
-                            <div class="dog-txt">
-                                <p style="text-align: center">
-                                    Wusstest du, dass jedes zweite
-                                    Tierheim vor dem Aus steht?
-                                    Das wollen wir &auml;ndern!
-                                </p>
-                            </div>
+<div id="container">
+    <div data-role="page" id="page" style="background-color: transparent !important;">
+        <div role="main" class="ui-content fullscreen" style="background-color:transparent !important;">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide bg-dog" style="background-color:transparent !important;">
+                        <div class="ui-grid-b toppadding" id="padding-dog">
+                            <img src="../img/gif/dog.gif" class="images">
                         </div>
-                        <div class="swiper-slide bg-rabbit" style="background-color:transparent !important;">
-                            <div class="ui-grid-b toppadding" id="padding-rabbit">
-                                <img src="../img/gif/rabbit.gif" class="images">
-                            </div>
-                            <div class="rabbit-txt">
-                                <p style="text-align: center">
-                                    Mit einem kleinen Geschenk kannst
-                                    du den Tieren eine gro&szlig;e Freude machen
-                                    und unterst&uuml;tzt gleichzeitig das Tierheim.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide bg-cat" style="background-color:transparent !important;">
-                            <div class="ui-grid-b toppadding" id="padding-cat">
-                                <img src="../img/gif/cat.gif" class="images">
-                            </div>
-                            <div class="cat-txt">
-                                <p style="text-align: center">
-                                    Du kannst beispielsweise Zeit, Nahrung
-                                    oder Gesundheit schenken und uns
-                                    damit eine gro&szlig;e Freunde machen.
-                                </p>
-                            </div>
-                            <div class="ui-grid-b">
-                               <a href="../pages/menu.html" class="ui-shadow ui-btn no-margin btn-goto-menu"></a>
-                            </div>
-
+                        <div class="dog-txt">
+                            <p style="text-align: center">
+                                Wusstest du, dass jedes zweite
+                                Tierheim vor dem Aus steht?
+                                Das wollen wir ändern!
+                            </p>
                         </div>
                     </div>
+                    <div class="swiper-slide bg-rabbit" style="background-color:transparent !important;">
+                        <div class="ui-grid-b toppadding" id="padding-rabbit">
+                            <img src="../img/gif/rabbit.gif" class="images">
+                        </div>
+                        <div class="rabbit-txt">
+                            <p style="text-align: center">
+                                Mit einem kleinen Geschenk kannst
+                                du den Tieren eine große Freude machen
+                                und unterstützt gleichzeitig das Tierheim.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg-cat" style="background-color:transparent !important;">
+                        <div class="ui-grid-b toppadding" id="padding-cat">
+                            <img src="../img/gif/cat.gif" class="images">
+                        </div>
+                        <div class="cat-txt">
+                            <p style="text-align: center">
+                                Du kannst beispielsweise Zeit, Nahrung
+                                oder Gesundheit schenken und uns
+                                damit eine große Freunde machen.
+                            </p>
+                        </div>
+                        <div class="ui-grid-b">
+                            <a href="#home" class="ui-shadow ui-btn no-margin btn-goto-menu"></a>
+                        </div>
+
+                    </div>
                 </div>
-            </div><!-- /content -->
+            </div>
+        </div><!-- /content -->
 
-            <div data-role="footer" data-position="fixed" data-theme="c" id="myFooter">
-                <h1 class="swiper-pagination"></h1>
-            </div><!-- /footer -->
-        </div><!-- /page -->
+        <div data-role="footer" data-position="fixed" data-theme="c" id="myFooter">
+            <h1 class="swiper-pagination"></h1>
+        </div><!-- /footer -->
+    </div><!-- /page -->
 
-    </div> <!-- container end -->
+    <div data-role="page" id="home" class="bg">
+        <div data-role="header" class="custom-header">
+            <h1>Menü</h1>
+        </div>
 
-    <!--############################### -->
+        <div data-role="main" class="ui-content" id="content">
 
-    <script>
-        $(window).bind( 'orientationchange', function(e){
-            var orientation="portrait";
-            if(window.orientation == -90 || window.orientation == 90) orientation = "landscape";
+            <div id="overlay"class="callout bottom">
+                <p id="popup-text">Mach uns ein Geschenk und hilf so dem Tierheim Berg</p>
+                <a id="btn-popup" who-is="one" class="ui-shadow ui-btn popup-btn">weiter</a>
+            </div>
 
-            switch(orientation){
-                case 'portrait':
-                    // alert('portrait');
+            <div class="ui-grid-a">
+                <div id="eins" class="ui-block-a">
+                    <a id="btn-sus" class="ui-shadow ui-btn sus no-margin"></a>
+                </div>
+                <div id="zwei" class="ui-block-b grey transparent">
+                    <a id="btn-tht" class="ui-shadow ui-btn tht no-margin"></a>
+                </div>
+                <div id="drei" class="ui-block-a grey transparent">
+                    <a id="btn-thb" class="ui-shadow ui-btn thb no-margin"></a>
+                </div>
+                <div id="vier" class="ui-block-b grey transparent">
+                    <a id="btn-sof" class="ui-shadow ui-btn sof no-margin"></a>
+                </div>
+                <div id="fuenf" class="ui-block-a grey transparent">
+                    <a id="btn-mg" class="ui-shadow ui-btn mg no-margin"></a>
+                </div>
+                <div id="sechs" class="ui-block-b grey transparent">
+                    <a id="btn-mpt" class="ui-shadow ui-btn mpt no-margin"></a>
+                </div>
+            </div><!-- /grid-a -->
+        </div><!-- /main -->
+    </div>
+</div> <!-- container end -->
 
-                    break;
-                case 'landscape':
-                    // alert('landscape');
-                    $('#myFooter').hide();
-                    break;
-                default:
-                    break;
-            };
-        });
-    </script>
+<script>
 
-    <script>
-        var app = document.URL.indexOf( 'http://' ) === -1 && document.URL.indexOf( 'https://' ) === -1;
-        if ( app ) {
-            // PhoneGap application
-            $('#padding-dog').removeClass("top-padding").addClass("smart-padding-top");
-            $('#padding-cat').removeClass("top-padding").addClass("smart-padding-top");
-            $('#padding-rabbit').removeClass("top-padding").addClass("smart-padding-top");
+    function handler(event){
+        event.stopImmediatePropagation();
+        if($(this).context.attributes[1].value == "one"){
 
-        } else {
+            $("#popup-text").text("Hier kannst du alle Tiere besuchen, die aktuell in dem Tierheim wohnen");
+            $("#eins").addClass('grey transparent');
+            $("#zwei").removeClass('grey transparent');
+            $(this).attr('who-is','two');
+            $('#overlay').css('margin-left', '30%');
+
+        }else if ($(this).context.attributes[1].value == "two"){
+            $("#popup-text").text("Was das Tierheim Berg alles leistet erfährst du hier");
+            $("#zwei").addClass('grey transparent');
+            $("#drei").removeClass('grey transparent');
+            $(this).attr('who-is','three');
+            $('#overlay').removeClass('callout bottom').addClass('callout top').css('margin-left', '10%').css('margin-top', '5%');
+
+        }else if ($(this).context.attributes[1].value == "three"){
+            $("#popup-text").text("Hier kannst du genau nachlesen wie die App funktioniert");
+            $("#drei").addClass('grey transparent');
+            $("#vier").removeClass('grey transparent');
+            $(this).attr('who-is','four');
+            $('#overlay').removeClass('callout bottom').addClass('callout top').css('margin-left', '30%');
+
+        }else if ($(this).context.attributes[1].value == "four"){
+            $("#popup-text").text("Was du schon alles gespendet hast, siehst du hier");
+            $("#vier").addClass('grey transparent');
+            $("#fuenf").removeClass('grey transparent');
+            $(this).attr('who-is','five');
+            $('#overlay').removeClass('callout bottom').addClass('callout top').css('margin-left', '10%').css('margin-top', '57%');
+
+        }else if ($(this).context.attributes[1].value == "five"){
+            $("#popup-text").text("Wenn du Pate werden willst schau hier vorbei!");
+            $("#fuenf").addClass('grey transparent');
+            $("#sechs").removeClass('grey transparent');
+            $(this).attr('who-is','exit');
+            $(this).text("Fertig!")
+            $('#overlay').removeClass('callout bottom').addClass('callout top').css('margin-left', '30%');
+
+        }else if ($(this).context.attributes[1].value == "exit"){
+            $("#eins").removeClass('grey transparent');
+            $("#zwei").removeClass('grey transparent');
+            $("#drei").removeClass('grey transparent');
+            $("#vier").removeClass('grey transparent');
+            $("#fuenf").removeClass('grey transparent');
+            $("#overlay").hide();
+
+            $('#btn-sus').prop("disabled", false).removeClass("ui-state-disabled");
+            $('#btn-tht').prop("disabled", false).removeClass("ui-state-disabled");
+            $('#btn-thb').prop("disabled", false).removeClass("ui-state-disabled");
+            $('#btn-mg').prop("disabled", false).removeClass("ui-state-disabled");
+            $('#btn-sof').prop("disabled", false).removeClass("ui-state-disabled");
+            $('#btn-mpt').prop("disabled", false).removeClass("ui-state-disabled")
 
         }
-    </script>
+    }
 
-    <script>
-        $(document).ready(function () {
-            //initialize swiper when document ready
-            var mySwiper = new Swiper ('.swiper-container', {
-                pagination: '.swiper-pagination',
-                paginationClickable: true,
-                onSlideChangeStart: function( swiper ){
-                    console.log(swiper)
-                    var classToRemove = previousIndex(swiper.previousIndex);
-                    switch (swiper.activeIndex){
-                        case 0:
-                            //$('#container').removeClass(classToRemove).addClass('bg-dog');
+</script>
 
-                            break;
-                        case 1:
-                           //$('#container').removeClass(classToRemove).addClass('bg-rabbit');
+<script type="text/javascript" src="cordova.js"></script>
 
-                            break;
-                        case 2:
-                           //$('#container').removeClass(classToRemove).addClass('bg-cat');
 
-                            break;
-                        default:
-                            break;
-                    }
+<script>
+    $(document).bind( "pagecontainershow", function( event ) {
+
+        $(document).on('click', '#btn-popup', handler);
+
+        $('#btn-sus').prop("disabled", true).addClass("ui-state-disabled");
+        $('#btn-tht').prop("disabled", true).addClass("ui-state-disabled");
+        $('#btn-thb').prop("disabled", true).addClass("ui-state-disabled");
+        $('#btn-mg').prop("disabled", true).addClass("ui-state-disabled");
+        $('#btn-sof').prop("disabled", true).addClass("ui-state-disabled");
+        $('#btn-mpt').prop("disabled", true).addClass("ui-state-disabled");
+        $(document).on('click', '#btn-sus', function(){alert("ok")	});
+
+    } );
+
+</script>
+
+<!--############################### -->
+
+<script>
+    $(window).bind( 'orientationchange', function(e){
+        var orientation="portrait";
+        if(window.orientation == -90 || window.orientation == 90) orientation = "landscape";
+
+        switch(orientation){
+            case 'portrait':
+                // alert('portrait');
+
+                break;
+            case 'landscape':
+                // alert('landscape');
+                $('#myFooter').hide();
+                break;
+            default:
+                break;
+        };
+    });
+</script>
+
+<script>
+    var app = document.URL.indexOf( 'http://' ) === -1 && document.URL.indexOf( 'https://' ) === -1;
+    if ( app ) {
+        // PhoneGap application
+        $('#padding-dog').removeClass("top-padding").addClass("smart-padding-top");
+        $('#padding-cat').removeClass("top-padding").addClass("smart-padding-top");
+        $('#padding-rabbit').removeClass("top-padding").addClass("smart-padding-top");
+
+    } else {
+        //do nothing
+    }
+</script>
+
+<script>
+    $(document).ready(function () {
+        //initialize swiper when document ready
+        var mySwiper = new Swiper ('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            onSlideChangeStart: function( swiper ){
+
+                var classToRemove = previousIndex(swiper.previousIndex);
+                switch (swiper.activeIndex){
+                    case 0:
+                        //$('#container').removeClass(classToRemove).addClass('bg-dog');
+
+                        break;
+                    case 1:
+                        //$('#container').removeClass(classToRemove).addClass('bg-rabbit');
+
+                        break;
+                    case 2:
+                        //$('#container').removeClass(classToRemove).addClass('bg-cat');
+
+                        break;
+                    default:
+                        break;
                 }
-            })
-        });
-    </script>
-
-    <script>
-        function previousIndex(index){
-
-            if(index == 0){
-                return "bg-dog";
-            }else if(index == 1){
-                return "bg-rabbit";
-            }else if(index == 2){
-                return "bg-cat";
             }
+        })
+    });
+</script>
 
+<script>
+    function previousIndex(index){
+
+        if(index == 0){
+            return "bg-dog";
+        }else if(index == 1){
+            return "bg-rabbit";
+        }else if(index == 2){
+            return "bg-cat";
         }
-    </script>
+
+    }
+</script>
 
 
-    <script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
 
-    </body>
+</body>
 </html>
