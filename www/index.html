@@ -18,21 +18,19 @@
     <body>
 
     <script>
-
-        $(function(){
-            $("body").hide();
-            $("body").fadeIn(2000);
-            setTimeout(function(){
-                $("body").fadeOut(1000,function(){
-                    window.location.href = "pages/intro.html"
-                })
-            },4000)
-        });
+                $(function(){
+                    $("body").hide();
+                    $("body").fadeIn(2000);
+                    setTimeout(function(){
+                        $("body").fadeOut(2000,function(){
+                            window.location.href = "pages/intro.html"
+                        })
+                    },4000)
+                });
 
     </script>
 
-
-    <div data-role="page" id="home" class="bg fading">
+    <div data-role="page" id="home" class="bg">
 
         <div data-role="main" class="ui-content" id="content">
             <img class="logo" src="img/icons/Logo-Pfotenhilfe.png">

@@ -23,7 +23,7 @@
 <script>
     $(function(){
         $("body").hide();
-        $("body").fadeIn(1000);
+        $("body").fadeIn(1500);
     })
 </script>
 
@@ -69,7 +69,7 @@
                             </p>
                         </div>
                         <div class="ui-grid-b">
-                            <a href="#home" class="ui-shadow ui-btn no-margin btn-goto-menu"></a>
+                            <a href="#menue" class="ui-shadow ui-btn no-margin btn-goto-menu"></a>
                         </div>
 
                     </div>
@@ -82,7 +82,7 @@
         </div><!-- /footer -->
     </div><!-- /page -->
 
-    <div data-role="page" id="home" class="bg">
+    <div data-role="page" id="menue" class="bg">
         <div data-role="header" class="custom-header">
             <h1>Menü</h1>
         </div>
@@ -96,27 +96,86 @@
 
             <div class="ui-grid-a">
                 <div id="eins" class="ui-block-a">
-                    <a id="btn-sus" class="ui-shadow ui-btn sus no-margin"></a>
+                    <a href="#schenken-und-spenden" id="btn-sus" class="ui-shadow ui-btn sus no-margin ui-state-disabled" disabled="true"></a>
                 </div>
                 <div id="zwei" class="ui-block-b grey transparent">
-                    <a id="btn-tht" class="ui-shadow ui-btn tht no-margin"></a>
+                    <a id="btn-tht" class="ui-shadow ui-btn tht no-margin ui-state-disabled" disabled="true"></a>
                 </div>
                 <div id="drei" class="ui-block-a grey transparent">
-                    <a id="btn-thb" class="ui-shadow ui-btn thb no-margin"></a>
+                    <a id="btn-thb" class="ui-shadow ui-btn thb no-margin ui-state-disabled" disabled="true"></a>
                 </div>
                 <div id="vier" class="ui-block-b grey transparent">
-                    <a id="btn-sof" class="ui-shadow ui-btn sof no-margin"></a>
+                    <a id="btn-sof" class="ui-shadow ui-btn sof no-margin ui-state-disabled" disabled="true"></a>
                 </div>
                 <div id="fuenf" class="ui-block-a grey transparent">
-                    <a id="btn-mg" class="ui-shadow ui-btn mg no-margin"></a>
+                    <a id="btn-mg" class="ui-shadow ui-btn mg no-margin ui-state-disabled" disabled="true"></a>
                 </div>
                 <div id="sechs" class="ui-block-b grey transparent">
-                    <a id="btn-mpt" class="ui-shadow ui-btn mpt no-margin"></a>
+                    <a id="btn-mpt" class="ui-shadow ui-btn mpt no-margin ui-state-disabled" disabled="true"></a>
                 </div>
             </div><!-- /grid-a -->
         </div><!-- /main -->
     </div>
+
+    <div data-role="page" id="schenken-und-spenden" class="bg-dog">
+        <div data-add-back-btn="true" data-rel="back" data-role="header" class="custom-header">
+            <a href="#menue" class="ui-btn ui-icon-myapp-menu ui-btn-icon-notext">Home</a>
+            <h1 class="no-margin">schenken und spenden</h1>
+        </div>
+
+        <div data-role="main" class="ui-content" id="content">
+
+            <div class="ui-grid-b bg-dog" id="boxoben">
+               <span><img id="z" class="icon-zub" src="../img/icons/zeit-und-bewegung-icon.png"></span>
+            </div>
+            <div class="ui-grid-b mit-bg-rabbit" id="boxmitte">
+                <span><img class="icon-nuw" src="../img/icons/narung-und-wohlbefinden-icon.png"></span>
+            </div>
+            <div class="ui-grid-b bg-cat" id="boxunten">
+               <span> <img class="icon-gup" src="../img/icons/gesundheit-und-pflege.png"></span>
+            </div>
+        </div><!-- /main -->
+    </div>
+
+
+    <div data-role="page" id="z-u-b" class="bg-dog">
+        <div data-role="header" class="custom-header">
+            <div data-add-back-btn="true" data-rel="back" data-role="header" class="custom-header">
+                <a href="#menue" class="ui-btn ui-icon-myapp-menu ui-btn-icon-notext">Home</a>
+                <h1 class="no-margin">zeit und bewegung</h1>
+            </div>
+        </div>
+
+        <div data-role="main" class="ui-content" id="content">
+
+            <div class="ui-grid-a">
+                <div id="z-eins" class="ui-block-a">
+                    <a id="z-btn-spielen" class="ui-shadow ui-btn spielen no-margin"></a>
+                </div>
+                <div id="z-zwei" class="ui-block-b">
+                    <a id="z-btn-streicheln" class="ui-shadow ui-btn streicheln no-margin"></a>
+                </div>
+                <div id="z-drei" class="ui-block-a">
+                    <a id="z-btn-spazieren" class="ui-shadow ui-btn spazieren no-margin"></a>
+                </div>
+                <div id="z-vier" class="ui-block-b">
+                    <a id="z-btn-versorgen" class="ui-shadow ui-btn versorgen no-margin"></a>
+                </div>
+            </div><!-- /grid-a -->
+        </div><!-- /main -->
+        <div data-role="footer" data-theme="c" data-position="fixed" class="zub-footer">
+            <div data-role="navbar" data-theme="c" class="h1-zub">
+                <ul>
+                    <li><a style="border-style:none; background-color: transparent;" href="#"><img src="../img/icons/icon-zeit-und-bewegung-ohne-text-farbe.png" style="width: 48%"></a></li>
+                    <li><a style="padding-top:18px;border-style:none; background-color: transparent;" href="#"><img src="../img/icons/icon-nahrung-und-wohlbefinden-ohne-text-farbe.png" style="width: 58%"></a></li>
+                    <li><a style="border-style:none; background-color: transparent;" href="#"><img src="../img/icons/icon-gesundheit-und-pflege-ohne-text-farbe.png" style="width: 48%"></a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
+
 </div> <!-- container end -->
+
 
 <script>
 
@@ -135,7 +194,7 @@
             $("#zwei").addClass('grey transparent');
             $("#drei").removeClass('grey transparent');
             $(this).attr('who-is','three');
-            $('#overlay').removeClass('callout bottom').addClass('callout top').css('margin-left', '10%').css('margin-top', '5%');
+            $('#overlay').removeClass('callout bottom').addClass('callout top').css('margin-left', '10%').css('margin-top', '10%');
 
         }else if ($(this).context.attributes[1].value == "three"){
             $("#popup-text").text("Hier kannst du genau nachlesen wie die App funktioniert");
@@ -149,7 +208,7 @@
             $("#vier").addClass('grey transparent');
             $("#fuenf").removeClass('grey transparent');
             $(this).attr('who-is','five');
-            $('#overlay').removeClass('callout bottom').addClass('callout top').css('margin-left', '10%').css('margin-top', '57%');
+            $('#overlay').removeClass('callout bottom').addClass('callout top').css('margin-left', '10%').css('margin-top', '65%');
 
         }else if ($(this).context.attributes[1].value == "five"){
             $("#popup-text").text("Wenn du Pate werden willst schau hier vorbei!");
@@ -187,13 +246,9 @@
 
         $(document).on('click', '#btn-popup', handler);
 
-        $('#btn-sus').prop("disabled", true).addClass("ui-state-disabled");
-        $('#btn-tht').prop("disabled", true).addClass("ui-state-disabled");
-        $('#btn-thb').prop("disabled", true).addClass("ui-state-disabled");
-        $('#btn-mg').prop("disabled", true).addClass("ui-state-disabled");
-        $('#btn-sof').prop("disabled", true).addClass("ui-state-disabled");
-        $('#btn-mpt').prop("disabled", true).addClass("ui-state-disabled");
-        $(document).on('click', '#btn-sus', function(){alert("ok")	});
+        $(document).on('click', '#z', function(){
+            $.mobile.changePage('#z-u-b');
+        })
 
     } );
 

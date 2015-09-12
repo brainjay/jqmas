@@ -24,16 +24,16 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-color:#000;
+    background-image:linear-gradient(top, #000 0%, #00f 51%);
+    background-image:-webkit-linear-gradient(top, #000 0%, #00f 51%);
+    background-image:-ms-linear-gradient(top, #000 0%, #00f 51%);
     background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
+            linear,
+            left top,
+            left bottom,
+            color-stop(0, #181621),
+            color-stop(0.51, #181621)
     );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
@@ -44,6 +44,8 @@ body {
     text-transform:uppercase;
     width:100%;
 }
+
+html { height:100%; }
 
 /* Portrait layout (default) */
 .app {
@@ -56,7 +58,7 @@ body {
     text-align:center;
     padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
     margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
+    /* offset horizontal: half of text area width */
 }
 
 /* Landscape layout (with min-width) */
@@ -65,7 +67,7 @@ body {
         background-position:left center;
         padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
         margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
+        /* offset horizontal: half of image width and text area width */
     }
 }
 
@@ -102,13 +104,13 @@ h1 {
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
- 
+
 @-webkit-keyframes fade {
     from { opacity: 1.0; }
     50% { opacity: 0.4; }
     to { opacity: 1.0; }
 }
- 
+
 .blink {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
@@ -120,23 +122,28 @@ h1 {
     text-shadow: none !important;
 }
 
+.prepage {
+    background: url("../img/background/prepage.png") !important;
+    background-size:auto;
+}
+
 .bg {
-    background: url("../img/background/hintergrund-neutral.jpg") !important;
+    background: url("../img/background/hintergrund-neutral_800.png") !important;
     background-size:auto;
 }
 
 .bg-cat {
-    background: url("../img/background/Hintergrund-Katze.jpg") !important;
+    background: url("../img/background/Hintergrund-Katze_800.png") !important;
     background-size:auto;
 }
 
 .bg-dog {
-    background: url("../img/background/Hintergrund-Hund.jpg") !important;
-    background-size:auto;
+    background: url("../img/background/Hintergrund-Hund_800.png") !important;
+    background-size:cover;
 }
 
 .bg-rabbit {
-    background: url("../img/background/Hintergrund-Kleintiere.jpg") !important;
+    background: url("../img/background/Hintergrund-Kleintiere_800.png") !important;
     background-size:auto;
 }
 
@@ -479,6 +486,7 @@ h1 {
 
 .no-margin{
     margin: 0 !important;
+    opacity: 1 !important;
 }
 
 @font-face{
@@ -520,7 +528,7 @@ h1 {
     position: absolute !important;
     top : 43px !important;
     right : 0;
-   /* bottom : 40px !important;*/
+    /* bottom : 40px !important;*/
     left : 0 !important;
 }
 
@@ -740,7 +748,7 @@ h1 {
 }
 
 #overlay {
-    margin-top: 60%;
+    margin-top: 50%;
     margin-left: 10%;
     color: #fff;
     text-align: center;
@@ -791,8 +799,8 @@ div.callout {
 
 .callout.top::before {
     left: 45%;
-    bottom: -20px;
-    border-top: 10px solid #444;
+    bottom: -45px;
+    border-top: 30px solid #444;
 }
 
 .callout.bottom::before {
@@ -823,4 +831,293 @@ div.callout {
     right: 7px;
     bottom: -20px;
     border-top: 10px solid #444;
+}
+
+
+#boxoben,
+#boxmitte,
+#boxunten{
+    margin: 0px;
+    padding: 0px;
+    height: 199px;
+}
+
+.icon-zub{
+    margin: 25px auto;
+    width: 35%;
+    display: block
+}
+
+.icon-nuw{
+    margin: 40px auto;
+    width: 50%;
+    display: block
+}
+
+.icon-gup{
+    margin: 35px auto;
+    width: 40%;
+    display: block
+}
+
+.ui-icon-myapp-menu {
+    background-image: url("../img/icons/menue.png");
+    background-color: transparent !important;
+    background-position: center;
+    background-clip:content-box;
+    background-size: 34px;
+    background-repeat: no-repeat;
+    border-style: none !important;
+    margin-left: 10px!important;
+}
+
+.ui-btn-icon-notext{
+    background-color: transparent !important;
+}
+
+.ui-btn-icon-notext:after{
+    background-color: transparent !important;
+}
+
+.mit-bg-rabbit {
+    background: url("../img/background/Hintergrund-Kleintiere_800_r.png") !important;
+    background-size:auto;
+}
+
+.zub-footer{
+    background-color: rgba(255,255,255,0.3)!important;
+}
+.h1-zub{
+    margin-top:10px!important;
+}
+
+a:link { color: transparent!important }
+a:visited { color: transparent!important; }
+a:hover { color: pink }
+a:focus { color: transparent!important; }
+a:active { color: transparent!important }
+a:visited:hover{color:transparent!important }
+
+<!-- -->
+
+
+.spielen{
+    background-image: url("../img/icons/spielen.png")!important;
+    background-color: transparent !important;
+    height: 132.5px;
+    display:block;
+    margin: 0 auto;
+    background-position: center;
+    background-clip:content-box;
+    background-size: 145px;
+    background-repeat: no-repeat;
+    border-width: 0 0 1px 0 !important;
+
+}
+
+.streicheln{
+    background-image: url("../img/icons/streicheln.png") !important;
+    background-color: transparent !important;
+    height: 132.5px;
+    display:block;
+    margin: 0 auto;
+    background-position: center;
+    background-clip:content-box;
+    background-size: 110px;
+    background-repeat: no-repeat;
+    border-width: 0 0 1px 1px !important;
+}
+
+.spazieren{
+    background-image: url("../img/icons/spazieren-gehen.png") !important;
+    background-color: transparent !important;
+    height: 132.5px;
+    display:block;
+    margin: 0 auto;
+    background-position: center;
+    background-clip:content-box;
+    background-size: 190px;
+    background-repeat: no-repeat;
+    border-width: 0 0 1px 0 !important;
+}
+
+.versorgen{
+    background-image: url("../img/icons/versorgen.png") !important;
+    background-color: transparent !important;
+    height: 132.5px;
+    display:block;
+    margin: 0 auto;
+    background-position: center;
+    background-clip:content-box;
+    background-size: 190px;
+    background-repeat: no-repeat;
+    border-width: 0 0 1px 1px !important;
+}
+
+@media screen and (min-height: 512px) {
+
+    .spielen{
+        background-image: url("../img/icons/spielen.png") !important;
+        background-color: transparent !important;
+        height: 235.5px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 123px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .streicheln{
+        background-image: url("../img/icons/streicheln.png") !important;
+        background-color: transparent !important;
+        height: 235.5px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 141px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+    .spazieren{
+        background-image: url("../img/icons/spazieren-gehen.png") !important;
+        background-color: transparent !important;
+        height: 236.5px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 100px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .versorgen{
+        background-image: url("../img/icons/versorgen.png") !important;
+        background-color: transparent !important;
+        height: 236.5px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 72px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+}
+
+@media screen and (min-height: 800px) {
+
+    .spielen{
+        background-image: url("../img/icons/spielen.png") !important;
+        background-color: transparent !important;
+        height: 229px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 230px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .streicheln{
+        background-image: url("../img/icons/streicheln.png") !important;
+        background-color: transparent !important;
+        height: 229px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 184px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+    .spazieren{
+        background-image: url("../img/icons/spazieren-gehen.png") !important;
+        background-color: transparent !important;
+        height: 229px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 155px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .versorgen{
+        background-image: url("../img/icons/versorgen.png") !important;
+        background-color: transparent !important;
+        height: 229px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 182px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+}
+
+@media screen and (min-height: 1100px) {
+
+    .spielen{
+        background-image: url("../img/icons/spielen.png") !important;
+        background-color: transparent !important;
+        height: 389px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 310px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .streicheln{
+        background-image: url("../img/icons/streicheln.png") !important;
+        background-color: transparent !important;
+        height: 389px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 252px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+    .spazieren{
+        background-image: url("../img/icons/spazieren-gehen.png") !important;
+        background-color: transparent !important;
+        height: 389px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 212px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .versorgen{
+        background-image: url("../img/icons/versorgen.png") !important;
+        background-color: transparent !important;
+        height: 389px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 262px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
 }
