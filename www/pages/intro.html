@@ -246,7 +246,8 @@
 
         $(document).on('click', '#btn-popup', handler);
 
-        $(document).on('click', '#z', function(){
+        $(document).on('click', '#z', function(event){
+            event.stopImmediatePropagation();
             $.mobile.changePage('#z-u-b');
         })
 
