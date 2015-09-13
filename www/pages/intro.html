@@ -146,22 +146,82 @@
             </div>
         </div>
 
-        <div data-role="main" class="ui-content content" id="main-zub">
-            <div class="ui-grid-a">
-                <div id="z-eins" class="ui-block-a">
-                    <a id="z-btn-eins" toRemove="spielen" class="ui-shadow ui-btn spielen no-margin"></a>
+        <div id="page1">
+            <div data-role="main" class="ui-content content" id="main-zub">
+                <div class="ui-grid-a">
+                    <div id="z-eins" class="ui-block-a">
+                        <a id="z-btn-eins" toRemove="spielen" class="ui-shadow ui-btn spielen no-margin"></a>
+                    </div>
+                    <div id="z-zwei" class="ui-block-b">
+                        <a id="z-btn-zwei" toRemove="streicheln" class="ui-shadow ui-btn streicheln no-margin"></a>
+                    </div>
+                    <div id="z-drei" class="ui-block-a">
+                        <a id="z-btn-drei" toRemove="spazieren" class="ui-shadow ui-btn spazieren no-margin"></a>
+                    </div>
+                    <div id="z-vier" class="ui-block-b">
+                        <a id="z-btn-vier" toRemove="versorgen" class="ui-shadow ui-btn versorgen no-margin"></a>
+                    </div>
+                </div><!-- /grid-a -->
+            </div><!-- /main -->
+        </div>
+
+        <div id="page2">
+            <div data-role="main" class="ui-content content" id="main-page2">
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a">
+                        <a href="#main-zub"><img id="back-btn" src="../img/icons/back.png"></a>
+                    </div>
                 </div>
-                <div id="z-zwei" class="ui-block-b">
-                    <a id="z-btn-zwei" toRemove="streicheln" class="ui-shadow ui-btn streicheln no-margin"></a>
+                <!-- Image-->
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a">
+                        <div>
+                            <img id="img-gift" src="../img/icons/leckerchen.png" class="gift-leckerchen">
+                        </div>
+                    </div>
                 </div>
-                <div id="z-drei" class="ui-block-a">
-                    <a id="z-btn-drei" toRemove="spazieren" class="ui-shadow ui-btn spazieren no-margin"></a>
+                <!-- Title -->
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a">
+                        <div id="gift-title" class="gift-leckerchen-title">
+                            MÖCHTEST DU
+                            LECKERCHEN SCHENKEN?
+                        </div>
+                    </div>
                 </div>
-                <div id="z-vier" class="ui-block-b">
-                    <a id="z-btn-vier" toRemove="versorgen" class="ui-shadow ui-btn versorgen no-margin"></a>
+
+                <!-- text -->
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a">
+                        <div id="gift-text" class="gift-text">
+                            Wenn du ein Leckerchen schenkst, spendest
+                            du damit 5 Euro an das Tierheim Berg.
+                            Mit diesem Geld können sie neues Futter
+                            kaufen und die Tiere versorgen.
+                        </div>
+                    </div>
                 </div>
-            </div><!-- /grid-a -->
-        </div><!-- /main -->
+                <!-- text 2-->
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a">
+                        <div id="subtitle" class="gift-subtitle">
+                            Schenke jetzt und schau was passiert!
+                        </div>
+                    </div>
+                </div>
+                <!-- button -->
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a">
+                        <div>
+                            <img id="gift-go" src="../img/icons/button-jetzt-spenden-und-schenken.png" class="gift-schenken">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div><!-- /main -->
+        </div>
+
         <div data-role="footer" data-theme="c" data-position="fixed" class="zub-footer">
             <div data-role="navbar" data-theme="c" class="h1-zub">
                 <ul>
@@ -362,12 +422,28 @@
 
     $(document).bind( "pagecontainershow", function( event ) {
 
+        $(document).on('click', '#z-btn-eins', function(){
+            $('#page2').show();
+            $('#page1').hide();
+        });
+
+        $(document).on('click', '#back-btn', function(){
+            $('#page2').hide();
+            $('#page1').show();
+        });
+
         $(document).on('click', '#btn-popup', handler);
 
         $(document).on('click', '#z', function(event){
             event.stopImmediatePropagation();
 
             zub(0);
+            if ($('#page1').is(":hidden")){
+
+                $('#page2').hide();
+                $('#page1').show();
+            }
+
 
         });
 
@@ -375,6 +451,12 @@
             event.stopImmediatePropagation();
 
             nuw(0);
+            if ($('#page1').is(":hidden")){
+
+                $('#page2').hide();
+                $('#page1').show();
+            }
+
 
         });
 
@@ -382,6 +464,12 @@
             event.stopImmediatePropagation();
 
             gup(0);
+            if ($('#page1').is(":hidden")){
+
+                $('#page2').hide();
+                $('#page1').show();
+            }
+
 
         });
 
@@ -392,6 +480,12 @@
             event.stopImmediatePropagation();
 
             zub(1);
+            if ($('#page1').is(":hidden")){
+
+                $('#page2').hide();
+                $('#page1').show();
+            }
+
 
         });
 
@@ -399,6 +493,11 @@
             event.stopImmediatePropagation();
 
             nuw(1);
+            if ($('#page1').is(":hidden")){
+
+                $('#page2').hide();
+                $('#page1').show();
+            }
 
         });
 
@@ -406,10 +505,19 @@
             event.stopImmediatePropagation();
 
             gup(1);
+            if ($('#page1').is(":hidden")){
+
+                $('#page2').hide();
+                $('#page1').show();
+            }
 
         });
 
     } );
+
+    $(document).on('pagecreate', function () {
+        $('#page2').hide();
+    })
 
 </script>
 
