@@ -32,8 +32,8 @@ body {
             linear,
             left top,
             left bottom,
-            color-stop(0, #181621),
-            color-stop(0.51, #181621)
+            color-stop(0, white),
+            color-stop(0.51, white)
     );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
@@ -117,7 +117,7 @@ h1 {
 }
 
 .custom-header{
-    background: rgba(255,255,255,0.4) !important;
+    background: rgba(255,255,255,0.2) !important;
     color: white !important;
     text-shadow: none !important;
 }
@@ -523,11 +523,11 @@ h1 {
 }
 
 
-#content {
-    padding: 0;
+.content {
+    padding: 0 !important;
     position: absolute !important;
     top : 43px !important;
-    right : 0;
+    right : 0 !important;
     /* bottom : 40px !important;*/
     left : 0 !important;
 }
@@ -883,6 +883,10 @@ div.callout {
     background: url("../img/background/Hintergrund-Kleintiere_800_r.png") !important;
     background-size:auto;
 }
+.mit-bg-rabbit2 {
+    background: url("../img/background/Hintergrund-Kleintiere_800_r2.png") !important;
+    background-size:auto;
+}
 
 .zub-footer{
     background-color: rgba(255,255,255,0.3)!important;
@@ -1121,3 +1125,478 @@ a:visited:hover{color:transparent!important }
     }
 
 }
+
+<!-- -->
+
+
+.wasser{
+    background-image: url("../img/icons/wasser.png")!important;
+    background-color: transparent !important;
+    height: 132.5px;
+    display:block;
+    margin: 0 auto;
+    background-position: center;
+    background-clip:content-box;
+    background-size: 145px;
+    background-repeat: no-repeat;
+    border-width: 0 0 1px 0 !important;
+
+}
+
+.leckerchen{
+    background-image: url("../img/icons/leckerchen.png") !important;
+    background-color: transparent !important;
+    height: 132.5px;
+    display:block;
+    margin: 0 auto;
+    background-position: center;
+    background-clip:content-box;
+    background-size: 110px;
+    background-repeat: no-repeat;
+    border-width: 0 0 1px 1px !important;
+}
+
+.futter{
+    background-image: url("../img/icons/futter.png") !important;
+    background-color: transparent !important;
+    height: 132.5px;
+    display:block;
+    margin: 0 auto;
+    background-position: center;
+    background-clip:content-box;
+    background-size: 190px;
+    background-repeat: no-repeat;
+    border-width: 0 0 1px 0 !important;
+}
+
+.schlafplatz{
+    background-image: url("../img/icons/schlafplatz.png") !important;
+    background-color: transparent !important;
+    height: 132.5px;
+    display:block;
+    margin: 0 auto;
+    background-position: center;
+    background-clip:content-box;
+    background-size: 190px;
+    background-repeat: no-repeat;
+    border-width: 0 0 1px 1px !important;
+}
+
+@media screen and (min-height: 512px) {
+
+    .wasser{
+        background-image: url("../img/icons/wasser.png") !important;
+        background-color: transparent !important;
+        height: 235.5px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 104px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .leckerchen{
+        background-image: url("../img/icons/leckerchen.png") !important;
+        background-color: transparent !important;
+        height: 235.5px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 141px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+    .futter{
+        background-image: url("../img/icons/futter.png") !important;
+        background-color: transparent !important;
+        height: 236.5px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 100px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .schlafplatz{
+        background-image: url("../img/icons/schlafplatz.png") !important;
+        background-color: transparent !important;
+        height: 236.5px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 158px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+}
+
+@media screen and (min-height: 800px) {
+
+    .wasser{
+        background-image: url("../img/icons/wasser.png") !important;
+        background-color: transparent !important;
+        height: 229px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 230px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .leckerchen{
+        background-image: url("../img/icons/leckerchen.png") !important;
+        background-color: transparent !important;
+        height: 229px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 184px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+    .futter{
+        background-image: url("../img/icons/futter.png") !important;
+        background-color: transparent !important;
+        height: 229px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 155px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .schlafplatz{
+        background-image: url("../img/icons/schlafplatz.png") !important;
+        background-color: transparent !important;
+        height: 229px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 182px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+}
+
+@media screen and (min-height: 1100px) {
+
+    .wasser{
+        background-image: url("../img/icons/wasser.png") !important;
+        background-color: transparent !important;
+        height: 389px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 310px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .leckerchen{
+        background-image: url("../img/icons/leckerchen.png") !important;
+        background-color: transparent !important;
+        height: 389px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 252px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+    .futter{
+        background-image: url("../img/icons/futter.png") !important;
+        background-color: transparent !important;
+        height: 389px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 212px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .schlafplatz{
+        background-image: url("../img/icons/schlafplatz.png") !important;
+        background-color: transparent !important;
+        height: 389px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 262px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- -->
+
+
+.plaster{
+    background-image: url("../img/icons/icon-pflaster.png")!important;
+    background-color: transparent !important;
+    height: 132.5px;
+    display:block;
+    margin: 0 auto;
+    background-position: center;
+    background-clip:content-box;
+    background-size: 145px;
+    background-repeat: no-repeat;
+    border-width: 0 0 1px 0 !important;
+
+}
+
+.medikamente{
+    background-image: url("../img/icons/medikamente.png") !important;
+    background-color: transparent !important;
+    height: 132.5px;
+    display:block;
+    margin: 0 auto;
+    background-position: center;
+    background-clip:content-box;
+    background-size: 110px;
+    background-repeat: no-repeat;
+    border-width: 0 0 1px 1px !important;
+}
+
+.impfung{
+    background-image: url("../img/icons/impfung.png") !important;
+    background-color: transparent !important;
+    height: 132.5px;
+    display:block;
+    margin: 0 auto;
+    background-position: center;
+    background-clip:content-box;
+    background-size: 190px;
+    background-repeat: no-repeat;
+    border-width: 0 0 1px 0 !important;
+}
+
+.operation{
+    background-image: url("../img/icons/operation.png") !important;
+    background-color: transparent !important;
+    height: 132.5px;
+    display:block;
+    margin: 0 auto;
+    background-position: center;
+    background-clip:content-box;
+    background-size: 190px;
+    background-repeat: no-repeat;
+    border-width: 0 0 1px 1px !important;
+}
+
+@media screen and (min-height: 512px) {
+
+    .plaster{
+        background-image: url("../img/icons/icon-pflaster.png") !important;
+        background-color: transparent !important;
+        height: 235.5px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 131px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .medikamente{
+        background-image: url("../img/icons/medikamente.png") !important;
+        background-color: transparent !important;
+        height: 235.5px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 134px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+    .impfung{
+        background-image: url("../img/icons/impfung.png") !important;
+        background-color: transparent !important;
+        height: 236.5px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 125px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .operation{
+        background-image: url("../img/icons/operation.png") !important;
+        background-color: transparent !important;
+        height: 236.5px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 141px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+}
+
+@media screen and (min-height: 800px) {
+
+    .pflaster{
+        background-image: url("../img/icons/icon-pflaster.png") !important;
+        background-color: transparent !important;
+        height: 229px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 230px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .medikamente{
+        background-image: url("../img/icons/medikamente.png") !important;
+        background-color: transparent !important;
+        height: 229px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 184px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+    .impfung{
+        background-image: url("../img/icons/impfung.png") !important;
+        background-color: transparent !important;
+        height: 229px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 155px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .operation{
+        background-image: url("../img/icons/operation.png") !important;
+        background-color: transparent !important;
+        height: 229px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 182px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+}
+
+@media screen and (min-height: 1100px) {
+
+    .pflaster{
+        background-image: url("../img/icons/icon-pflaster.png") !important;
+        background-color: transparent !important;
+        height: 389px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 310px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .impfung{
+        background-image: url("../img/icons/impfung.png") !important;
+        background-color: transparent !important;
+        height: 389px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 252px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+    .medikamente{
+        background-image: url("../img/icons/medikamente.png") !important;
+        background-color: transparent !important;
+        height: 389px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 212px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 0 !important;
+    }
+
+    .operation{
+        background-image: url("../img/icons/operation.png") !important;
+        background-color: transparent !important;
+        height: 389px;
+        display:block;
+        margin: 0 auto;
+        background-position: center;
+        background-clip:content-box;
+        background-size: 262px;
+        background-repeat: no-repeat;
+        border-width: 0 0 1px 1px !important;
+    }
+
+}
+
+.ui-overlay-a{background-color: #000;}
+.ui-overlay-b{background-color: #000;}
+.ui-overlay-c{background-color: #000;}
+.ui-overlay-d{background-color: #000;}
+.ui-overlay-e{background-color: #000;}

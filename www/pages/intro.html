@@ -87,7 +87,7 @@
             <h1>Menü</h1>
         </div>
 
-        <div data-role="main" class="ui-content" id="content">
+        <div data-role="main" class="ui-content content" id="main-menue">
 
             <div id="overlay"class="callout bottom">
                 <p id="popup-text">Mach uns ein Geschenk und hilf so dem Tierheim Berg</p>
@@ -123,57 +123,55 @@
             <h1 class="no-margin">schenken und spenden</h1>
         </div>
 
-        <div data-role="main" class="ui-content" id="content">
+        <div data-role="main" class="ui-content content" id="main-sus">
 
             <div class="ui-grid-b bg-dog" id="boxoben">
                <span><img id="z" class="icon-zub" src="../img/icons/zeit-und-bewegung-icon.png"></span>
             </div>
             <div class="ui-grid-b mit-bg-rabbit" id="boxmitte">
-                <span><img class="icon-nuw" src="../img/icons/narung-und-wohlbefinden-icon.png"></span>
+                <span><img id="n" class="icon-nuw" src="../img/icons/narung-und-wohlbefinden-icon.png"></span>
             </div>
             <div class="ui-grid-b bg-cat" id="boxunten">
-               <span> <img class="icon-gup" src="../img/icons/gesundheit-und-pflege.png"></span>
+               <span> <img id="g" class="icon-gup" src="../img/icons/gesundheit-und-pflege.png"></span>
             </div>
         </div><!-- /main -->
     </div>
 
 
-    <div data-role="page" id="z-u-b" class="bg-dog">
+    <div data-role="page" id="z-u-b" toRemove="bg-dog" class="bg-dog">
         <div data-role="header" class="custom-header">
             <div data-add-back-btn="true" data-rel="back" data-role="header" class="custom-header">
                 <a href="#menue" class="ui-btn ui-icon-myapp-menu ui-btn-icon-notext">Home</a>
-                <h1 class="no-margin">zeit und bewegung</h1>
+                <h1 id="sub-title" class="no-margin">zeit und bewegung</h1>
             </div>
         </div>
 
-        <div data-role="main" class="ui-content" id="content">
-
+        <div data-role="main" class="ui-content content" id="main-zub">
             <div class="ui-grid-a">
                 <div id="z-eins" class="ui-block-a">
-                    <a id="z-btn-spielen" class="ui-shadow ui-btn spielen no-margin"></a>
+                    <a id="z-btn-eins" toRemove="spielen" class="ui-shadow ui-btn spielen no-margin"></a>
                 </div>
                 <div id="z-zwei" class="ui-block-b">
-                    <a id="z-btn-streicheln" class="ui-shadow ui-btn streicheln no-margin"></a>
+                    <a id="z-btn-zwei" toRemove="streicheln" class="ui-shadow ui-btn streicheln no-margin"></a>
                 </div>
                 <div id="z-drei" class="ui-block-a">
-                    <a id="z-btn-spazieren" class="ui-shadow ui-btn spazieren no-margin"></a>
+                    <a id="z-btn-drei" toRemove="spazieren" class="ui-shadow ui-btn spazieren no-margin"></a>
                 </div>
                 <div id="z-vier" class="ui-block-b">
-                    <a id="z-btn-versorgen" class="ui-shadow ui-btn versorgen no-margin"></a>
+                    <a id="z-btn-vier" toRemove="versorgen" class="ui-shadow ui-btn versorgen no-margin"></a>
                 </div>
             </div><!-- /grid-a -->
         </div><!-- /main -->
         <div data-role="footer" data-theme="c" data-position="fixed" class="zub-footer">
             <div data-role="navbar" data-theme="c" class="h1-zub">
                 <ul>
-                    <li><a style="border-style:none; background-color: transparent;" href="#"><img src="../img/icons/icon-zeit-und-bewegung-ohne-text-farbe.png" style="width: 48%"></a></li>
-                    <li><a style="padding-top:18px;border-style:none; background-color: transparent;" href="#"><img src="../img/icons/icon-nahrung-und-wohlbefinden-ohne-text-farbe.png" style="width: 58%"></a></li>
-                    <li><a style="border-style:none; background-color: transparent;" href="#"><img src="../img/icons/icon-gesundheit-und-pflege-ohne-text-farbe.png" style="width: 48%"></a></li>
+                    <li><a style="border-style:none; background-color: transparent;"><img id="zub-img" src="../img/icons/icon-zeit-und-bewegung-ohne-text.png" style="width: 48%"></a></li>
+                    <li><a style="padding-top:18px;border-style:none; background-color: transparent;"><img id="nuw-img" src="../img/icons/icon-nahrung-und-wohlbefinden-ohne-text.png" style="width: 58%"></a></li>
+                    <li><a style="border-style:none; background-color: transparent;"><img id="gup-img" src="../img/icons/icon-gesundheit-und-pflege-ohne-text.png" style="width: 48%"></a></li>
                 </ul>
             </div><!-- /navbar -->
         </div><!-- /footer -->
     </div>
-
 </div> <!-- container end -->
 
 
@@ -242,14 +240,174 @@
 
 
 <script>
+    function zub(num){
+        var bg = $('#z-u-b').attr('toRemove');
+        var b1 = $('#z-btn-eins').attr('toRemove');
+        var b2 = $('#z-btn-zwei').attr('toRemove');
+        var b3 = $('#z-btn-drei').attr('toRemove');
+        var b4 = $('#z-btn-vier').attr('toRemove');
+
+        $('#z-u-b').removeClass(bg).addClass('bg-dog');
+        $('#z-btn-eins').removeClass(b1).addClass('spielen');
+        $('#z-btn-zwei').removeClass(b2).addClass('streicheln');
+        $('#z-btn-drei').removeClass(b3).addClass('spazieren');
+        $('#z-btn-vier').removeClass(b4).addClass('versorgen');
+
+        $('#z-u-b').attr('toRemove', 'bg-dog');
+
+        $('#z-btn-eins').attr('toRemove','spielen');
+        $('#z-btn-zwei').attr('toRemove','streicheln');
+        $('#z-btn-drei').attr('toRemove','spazieren');
+        $('#z-btn-vier').attr('toRemove','versorgen');
+
+
+        $('#sub-title').text("zeit und bewegung");
+
+        $('#zub-img').attr('src', '../img/icons/icon-zeit-und-bewegung-ohne-text-farbe.png');
+        $('#nuw-img').attr('src', '../img/icons/icon-nahrung-und-wohlbefinden-ohne-text.png');
+        $('#gup-img').attr('src', '../img/icons/icon-gesundheit-und-pflege-ohne-text.png');
+
+        if(num == 0){
+            console.log('change zub')
+            $.mobile.changePage('#z-u-b');
+        }else if(num ==1){
+            $(function(){
+                $("body").hide();
+                $("body").fadeIn(200);
+            })
+        }
+
+    }
+
+    function nuw(num){
+        var bg = $('#z-u-b').attr('toRemove');
+        var b1 = $('#z-btn-eins').attr('toRemove');
+        var b2 = $('#z-btn-zwei').attr('toRemove');
+        var b3 = $('#z-btn-drei').attr('toRemove');
+        var b4 = $('#z-btn-vier').attr('toRemove');
+
+        $('#z-u-b').removeClass(bg).addClass('mit-bg-rabbit2');
+        $('#z-btn-eins').removeClass(b1).addClass('wasser');
+        $('#z-btn-zwei').removeClass(b2).addClass('leckerchen');
+        $('#z-btn-drei').removeClass(b3).addClass('futter');
+        $('#z-btn-vier').removeClass(b4).addClass('schlafplatz');
+
+        $('#z-u-b').attr('toRemove', 'mit-bg-rabbit2');
+
+        $('#z-btn-eins').attr('toRemove','wasser');
+        $('#z-btn-zwei').attr('toRemove','leckerchen');
+        $('#z-btn-drei').attr('toRemove','futter');
+        $('#z-btn-vier').attr('toRemove','schlafplatz');
+
+        $('#zub-img').attr('src', '../img/icons/icon-zeit-und-bewegung-ohne-text.png');
+        $('#nuw-img').attr('src', '../img/icons/icon-nahrung-und-wohlbefinden-ohne-text-farbe.png');
+        $('#gup-img').attr('src', '../img/icons/icon-gesundheit-und-pflege-ohne-text.png');
+
+
+        $('#sub-title').text("nahrung und wohlbefinden")
+
+        if(num == 0){
+            console.log('change nuw')
+            $.mobile.changePage('#z-u-b');
+        }else if(num ==1){
+            $(function(){
+                $("body").hide();
+                $("body").fadeIn(200);
+            })
+        }
+
+    }
+
+    function gup(num){
+        var bg = $('#z-u-b').attr('toRemove');
+        var b1 = $('#z-btn-eins').attr('toRemove');
+        var b2 = $('#z-btn-zwei').attr('toRemove');
+        var b3 = $('#z-btn-drei').attr('toRemove');
+        var b4 = $('#z-btn-vier').attr('toRemove');
+
+        $('#z-u-b').removeClass(bg).addClass('bg-cat');
+        $('#z-btn-eins').removeClass(b1).addClass('plaster');
+        $('#z-btn-zwei').removeClass(b2).addClass('medikamente');
+        $('#z-btn-drei').removeClass(b3).addClass('impfung');
+        $('#z-btn-vier').removeClass(b4).addClass('operation');
+
+        $('#z-u-b').attr('toRemove', 'bg-cat');
+
+        $('#z-btn-eins').attr('toRemove','plaster');
+        $('#z-btn-zwei').attr('toRemove','medikamente');
+        $('#z-btn-drei').attr('toRemove','impfung');
+        $('#z-btn-vier').attr('toRemove','operation');
+
+        $('#zub-img').attr('src', '../img/icons/icon-zeit-und-bewegung-ohne-text.png');
+        $('#nuw-img').attr('src', '../img/icons/icon-nahrung-und-wohlbefinden-ohne-text.png');
+        $('#gup-img').attr('src', '../img/icons/icon-gesundheit-und-pflege-ohne-text-farbe.png');
+
+
+        $('#sub-title').text("gesundheit und pflege")
+
+
+        if(num == 0){
+            console.log('change gup')
+            $.mobile.changePage('#z-u-b');
+        }else if(num ==1){
+            $(function(){
+                $("body").hide();
+                $("body").fadeIn(200);
+            })
+        }
+
+    }
+
+
+
     $(document).bind( "pagecontainershow", function( event ) {
 
         $(document).on('click', '#btn-popup', handler);
 
         $(document).on('click', '#z', function(event){
             event.stopImmediatePropagation();
-            $.mobile.changePage('#z-u-b');
-        })
+
+            zub(0);
+
+        });
+
+        $(document).on('click', '#n', function(event){
+            event.stopImmediatePropagation();
+
+            nuw(0);
+
+        });
+
+        $(document).on('click', '#g', function(event){
+            event.stopImmediatePropagation();
+
+            gup(0);
+
+        });
+
+
+        // Image clicks
+
+        $(document).on('click', '#zub-img', function(event){
+            event.stopImmediatePropagation();
+
+            zub(1);
+
+        });
+
+        $(document).on('click', '#nuw-img', function(event){
+            event.stopImmediatePropagation();
+
+            nuw(1);
+
+        });
+
+        $(document).on('click', '#gup-img', function(event){
+            event.stopImmediatePropagation();
+
+            gup(1);
+
+        });
 
     } );
 
