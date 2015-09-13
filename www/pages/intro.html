@@ -176,7 +176,7 @@
                 <div class="ui-grid-solo">
                     <div class="ui-block-a">
                         <div>
-                            <img id="img-gift" src="../img/icons/leckerchen.png" class="gift-leckerchen">
+                            <img id="img-gift" src="../img/icons/wasser.png" class="gift-leckerchen">
                         </div>
                     </div>
                 </div>
@@ -194,10 +194,6 @@
                 <div class="ui-grid-solo">
                     <div class="ui-block-a">
                         <div id="gift-text" class="gift-text">
-                            Wenn du ein Leckerchen schenkst, spendest
-                            du damit 5 Euro an das Tierheim Berg.
-                            Mit diesem Geld können sie neues Futter
-                            kaufen und die Tiere versorgen.
                         </div>
                     </div>
                 </div>
@@ -218,9 +214,29 @@
                     </div>
                 </div>
 
+            </div><!-- /main -->
+        </div><!--/page2 -->
+
+        <div id="page3">
+            <div data-role="main" class="ui-content content" id="main-page3">
+                <div class='overlay-back'><img id="over-back-btn" src="../img/icons/back.png"></div>
+
+                <div id="video-bg">
+                    <video controls>
+                        <!-- Default video source: -->
+                        <source type="video/mp4" src="../animationen-Starscreen/video-1440875666.mp4.mp4"
+                                media="(orientation:landscape)">
+                        <!-- Use square video source to waste less bandwidth: -->
+                        <source type="video/mp4" src="../animationen-Starscreen/video-1440875666.mp4.mp4"
+                                media="(orientation:portrait)">
+                    </video>
+                    <!--
+                      Buttons or metadata go here
+                    -->
+                </div>
 
             </div><!-- /main -->
-        </div>
+        </div><!-- /page3 -->
 
         <div data-role="footer" data-theme="c" data-position="fixed" class="zub-footer">
             <div data-role="navbar" data-theme="c" class="h1-zub">
@@ -422,12 +438,158 @@
 
     $(document).bind( "pagecontainershow", function( event ) {
 
-        $(document).on('click', '#z-btn-eins', function(){
-            $('#page2').show();
-            $('#page1').hide();
+
+        $(document).on('click', '#gift-go', function(event){
+            event.stopImmediatePropagation();
+
+            $('#page2').hide();
+            $('#page3').show();
+
         });
 
-        $(document).on('click', '#back-btn', function(){
+        $(document).on('click', '#over-back-btn', function(event){
+            event.stopImmediatePropagation();
+            $('#page3').hide();
+            $('#page2').show();
+
+        });
+
+        $(document).on('click', '#z-btn-eins', function(event){
+            event.stopImmediatePropagation();
+            $('#page2').show();
+            $('#page1').hide();
+
+
+            if($(this).attr('toRemove') == 'spielen'){
+
+                $('#gift-title').text("Möchtest du spielen schenken?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/spielen.png');
+                $('#img-gift').css('width','128.5px');
+
+            }else if($(this).attr('toRemove') == 'wasser'){
+                $('#gift-title').text("Möchtest du Wasser schenken?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/wasser.png');
+                $('#img-gift').css('width','114px');
+
+            }else if($(this).attr('toRemove') == 'plaster'){
+                $('#gift-title').text("Möchtest du Pflaster schenken?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/pflaster.png');
+                $('#img-gift').css('width','127px');
+            }
+
+
+        });
+
+        $(document).on('click', '#z-btn-zwei', function(event){
+            event.stopImmediatePropagation();
+            $('#page2').show();
+            $('#page1').hide();
+
+            if($(this).attr('toRemove') == 'streicheln'){
+
+                $('#gift-title').text("Möchtest du streicheln schenken?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/streicheln.png');
+                $('#img-gift').css('width','153.5px');
+
+            }else if($(this).attr('toRemove') == 'leckerchen'){
+                $('#gift-title').text("Möchtest du leckerchen schenken?");
+                $('#gift-text').text("Wenn du ein Leckerchen schenkst, " +
+                        "spendest du damit 5 Euro an das Tierheim Berg." +
+                        " Mit diesem Geld können sie neues Futter kaufen und die Tiere versorgen.");
+                $('#img-gift').attr('src','../img/icons/leckerchen.png');
+                $('#img-gift').css('width','155px');
+
+            }else if($(this).attr('toRemove') == 'medikamente'){
+                $('#gift-title').text("Möchtest du Medikamente schenken?");
+                $('#gift-title').css('width','190px');
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/medikamente.png');
+                $('#img-gift').css('width','144px');
+            }
+        });
+
+
+        $(document).on('click', '#z-btn-drei', function(event){
+            event.stopImmediatePropagation();
+            $('#page2').show();
+            $('#page1').hide();
+
+            if($(this).attr('toRemove') == 'spazieren'){
+
+                $('#gift-title').text("Möchtest du spazieren gehen?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/spazieren-gehen.png');
+                $('#img-gift').css('width','120px');
+
+            }else if($(this).attr('toRemove') == 'futter'){
+                $('#gift-title').text("Möchtest du Futter schenken?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/futter.png');
+                $('#img-gift').css('width','113px');
+
+            }else if($(this).attr('toRemove') == 'impfung'){
+                $('#gift-title').text("Möchtest du Impfungen schenken?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/impfung.png');
+                $('#img-gift').css('width','127.5px');
+            }
+        });
+
+        $(document).on('click', '#z-btn-vier', function(event){
+            event.stopImmediatePropagation();
+            $('#page2').show();
+            $('#page1').hide();
+
+            if($(this).attr('toRemove') == 'versorgen'){
+
+                $('#gift-title').text("Möchtest du versorgen schenken?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/versorgen.png');
+                $('#img-gift').css('width','81.5px');
+
+            }else if($(this).attr('toRemove') == 'schlafplatz'){
+                $('#gift-title').text("Möchtest du Wasser schenken?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/schlafplatz.png');
+                $('#img-gift').css('width','208px');
+
+            }else if($(this).attr('toRemove') == 'operation'){
+                $('#gift-title').text("Möchtest du Operation schenken?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/operation.png');
+                $('#img-gift').css('width','142px');
+            }
+
+        });
+
+        $(document).on('click', '#back-btn', function(event){
+            event.stopImmediatePropagation();
             $('#page2').hide();
             $('#page1').show();
         });
@@ -517,6 +679,7 @@
 
     $(document).on('pagecreate', function () {
         $('#page2').hide();
+        $('#page3').hide();
     })
 
 </script>
