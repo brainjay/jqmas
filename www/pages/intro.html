@@ -224,14 +224,18 @@
 
                 <video muted id="bgvid">
                     <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-                    <source src="../animationen-Starscreen/MOV_0065.mp4" type="video/mp4">
+                    <source id="video1" src="../Videos/leckerchen.m4v">
+                    Your browser doesn't support video
                 </video>
                 <button class="myPlayButton" id="play-btn"><img class="pla" src="../img/icons/play-button.png" ></button>
+                <button class="share-replay" id="play-button"><img class="img-replay" src="../img/Icons-neu-2/button-nochmal-anbspielen.png" ></button>
+                <button class="share-replay" id="share-button"><img class="img-share" src="../img/Icons-neu-2/button-video-teilen.png" ></button>
+
 
             </div><!-- /main -->
         </div><!-- /page3 -->
 
-        <div data-role="footer" data-theme="c" data-position="fixed" class="zub-footer">
+        <div id="video-footer" data-role="footer" data-theme="c" data-position="fixed" class="zub-footer">
             <div data-role="navbar" data-theme="c" class="h1-zub">
                 <ul>
                     <li><a style="border-style:none; background-color: transparent;"><img id="zub-img" src="../img/icons/icon-zeit-und-bewegung-ohne-text.png" style="width: 48%"></a></li>
@@ -251,15 +255,24 @@
             video.pause();
             video.currentTime = 0.0;
             $('#play-btn').css('opacity','1');
+            $('#video-footer').show();
+            $('#play-button').hide();
+            $('#share-button').hide();
 
         }else{
             video.currentTime = 0.0;
+            $('#play-button').hide();
+            $('#share-button').hide();
+            $('#play-btn').css('opacity','1');
+            $('#play-btn').show();
         }
 
     }
 
     var vid = document.getElementById("bgvid");
-    var pauseButton = document.querySelector("#main-page3 button");
+    var pauseButton = document.querySelector("#play-btn");
+    var player = document.querySelector("#play-button");
+
 
     function vidFade() {
         vid.classList.add("stopfade");
@@ -267,16 +280,26 @@
 
     vid.addEventListener('ended', function()
     {
+        var pauseButton = document.querySelector("#play-btn");
 // only functional if "loop" is removed
         vid.pause();
 // to capture IE10
         vidFade();
+        $('#video-footer').show();
+        $(pauseButton).hide();
+
+        var sharebutton = document.querySelector("#share-button");
+        var playbutton = document.querySelector("#play-button");
+
+        $(sharebutton).show();
+        $(playbutton).show();
+
     });
 
-    document.getElementById('bgvid').addEventListener('ended',myHandler,false);
+ /*   document.getElementById('bgvid').addEventListener('ended',myHandler,false);
     function myHandler(e) {
         $('#play-btn').css('opacity','1');
-    }
+    }*/
 
 
     pauseButton.addEventListener("click", function() {
@@ -284,13 +307,35 @@
         if (vid.paused) {
             vid.play();
             $('#play-btn').css('opacity','0');
+            $('#video-footer').hide();
 
         } else {
             vid.pause();
             $('#play-btn').css('opacity','1');
+            $('#video-footer').show();
 
         }
     })
+
+
+    player.addEventListener("click", function() {
+        var vid = document.getElementById("bgvid");
+        if (vid.paused) {
+            vid.play();
+            $('#play-btn').css('opacity', '0');
+            $('#share-button').hide();
+            $('#play-button').hide();
+            $('#video-footer').hide();
+            $('#play-btn').show();
+
+        } else {
+            vid.pause();
+            $('#play-btn').css('opacity', '1');
+            $('#video-footer').show();
+
+        }
+    });
+
 </script>
 
 
@@ -481,7 +526,29 @@
 
     $(document).bind( "pagecontainershow", function( event ) {
 
+        $('#share-button').hide();
+        $('#play-button').hide();
 
+        $(document).on('click','#share-button', function(event){
+            event.stopImmediatePropagation();
+            alert('share not yet implemented')
+        });
+
+        $(document).on('click','#play-button', function(event){
+            event.stopImmediatePropagation();
+            var vid = document.getElementById("bgvid");
+
+            if (vid.paused) {
+                vid.play();
+                $('#play-btn').css('opacity','0');
+                $('#video-footer').hide();
+                $('#share-button').hide();
+                $('#play-button').hide();
+
+            }else{
+                $('#play-btn').show();
+            }
+        });
 
         $(function () {
 
@@ -515,7 +582,7 @@
             restart();
             $('#page2').hide();
             $('#page3').show();
-            $(document).trigger('update').trigger('refresh');
+            $('#video4').show();
 
         });
 
