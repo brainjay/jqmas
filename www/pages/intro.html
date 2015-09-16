@@ -8,13 +8,18 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
     <link rel="stylesheet" type="text/css" href="../lib/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../lib/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="../lib/owl-carousel/owl.theme.css">
+
+
 
     <link rel="stylesheet" type="text/css" href="../lib/jquery-mobile/css/jquery.mobile-1.4.5.min.css">
     <script src="../lib/jquery/js/jquery-2.1.4.min.js" type="text/javascript"></script>
     <script src="../lib/jquery-mobile/js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
     <script src="../lib/swiper/dist/js/swiper.jquery.min.js"></script>
     <script type="text/javascript" src="../js/index.js"></script>
-    <script type="text/javascript" src="../lib/jquery.cloudinary.js"></script>
+    <script type="text/javascript" src="../lib/owl-carousel/owl.carousel.js"></script>
+
 
     <title>Pfotenhilfe</title>
 
@@ -100,7 +105,7 @@
                     <a href="#schenken-und-spenden" id="btn-sus" class="ui-shadow ui-btn sus no-margin ui-state-disabled" disabled="true"></a>
                 </div>
                 <div id="zwei" class="ui-block-b grey transparent">
-                    <a id="btn-tht" class="ui-shadow ui-btn tht no-margin ui-state-disabled" disabled="true"></a>
+                    <a href="#tierheim-tiere" id="btn-tht" class="ui-shadow ui-btn tht no-margin ui-state-disabled" disabled="true"></a>
                 </div>
                 <div id="drei" class="ui-block-a grey transparent">
                     <a id="btn-thb" class="ui-shadow ui-btn thb no-margin ui-state-disabled" disabled="true"></a>
@@ -232,8 +237,6 @@
                 <button class="myPlayButton" id="play-btn"><img class="pla" src="../img/icons/play-button.png" ></button>
                 <button class="share-replay" id="play-button"><img class="img-replay" src="../img/Icons-neu-2/button-nochmal-anbspielen.png" ></button>
                 <button class="share-replay" id="share-button"><img class="img-share" src="../img/Icons-neu-2/button-video-teilen.png" ></button>
-
-
             </div><!-- /main -->
         </div><!-- /page3 -->
 
@@ -246,8 +249,62 @@
                 </ul>
             </div><!-- /navbar -->
         </div><!-- /footer -->
+
     </div>
+
+    <div data-role="page" id="tierheim-tiere" class="bg">
+        <div data-add-back-btn="true" data-rel="back" data-role="header" class="custom-header">
+            <a id="back-home4" href="#menue" class="ui-btn ui-icon-myapp-menu ui-btn-icon-notext">Home</a>
+            <h1 class="no-margin">alle tiere</h1>
+        </div>
+
+        <div data-role="main" class="ui-content content" id="main-tht">
+            
+            <div class="ui-grid-solo">
+                <img class="tht-img" src="../img/Tierbilder/Fee-gross.png">
+            </div>
+
+            <div class="tht-imgs"></div>
+
+            <div id="owl-example" class="owl-carousel">
+                <div> <img class="yo" id="Walter" style="width: 100%" src="../img/Tierbilder/Walter.png"> </div>
+                <div> <img class="yo" id="Baily"style="width: 100%" src="../img/Tierbilder/Baily.png"> </div>
+                <div> <img class="yo" id="Fridolin"style="width: 100%" src="../img/Tierbilder/Fridolin.png"> </div>
+                <div> <img class="yo" id="Candy" style="width: 100%" src="../img/Tierbilder/Candy.png"> </div>
+                <div> <img class="yo" id="Oma"style="width: 100%" src="../img/Tierbilder/Oma.png"> </div>
+                <div> <img class="yo" id="Walter" style="width: 100%" src="../img/Tierbilder/Walter.png"> </div>
+                <div> <img class="yo" id="Baily"style="width: 100%" src="../img/Tierbilder/Baily.png"> </div>
+                <div> <img class="yo" id="Fridolin"style="width: 100%" src="../img/Tierbilder/Fridolin.png"> </div>
+                <div> <img class="yo" id="Candy" style="width: 100%" src="../img/Tierbilder/Candy.png"> </div>
+                <div> <img class="yo" id="Oma"style="width: 100%" src="../img/Tierbilder/Oma.png"> </div>
+                <div> <img class="yo" id="Walter" style="width: 100%" src="../img/Tierbilder/Walter.png"> </div>
+                <div> <img class="yo" id="Baily"style="width: 100%" src="../img/Tierbilder/Baily.png"> </div>
+                <div> <img class="yo" id="Fridolin"style="width: 100%" src="../img/Tierbilder/Fridolin.png"> </div>
+                <div> <img class="yo" id="Candy" style="width: 100%" src="../img/Tierbilder/Candy.png"> </div>
+                <div> <img class="yo" id="Oma"style="width: 100%" src="../img/Tierbilder/Oma.png"> </div>
+
+            </div>
+
+
+        </div><!-- /main -->
+        <div id="tht-footer" data-role="footer" data-theme="c" data-position="fixed" class="zub-footer">
+            <div data-role="navbar" data-theme="c" class="h1-zub">
+                <ul>
+                    <li><a style="border-style:none; background-color: transparent;"><img id="cat-img" src="../img/icons/katze.png" style="width: 66%"></a></li>
+                    <li><a style="border-style:none; background-color: transparent;"><img id="dog-img" src="../img/icons/hund.png" style="width: 85%"></a></li>
+                    <li><a style="border-style:none; background-color: transparent;"><img id="rabbit-img" src="../img/icons/kleintiere.png" style="width: 61%"></a></li>
+                    <li><a style="border-style:none; background-color: transparent;"><img id="all-img" src="../img/icons/alle-tiere-farbe.png" style="width: 96%"></a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->
+    </div>
+
 </div> <!-- container end -->
+
+<script type="text/javascript">
+
+
+</script>
 
 <script>
     function restart() {
@@ -339,6 +396,7 @@
     });
 
 </script>
+
 
 
 <script>
@@ -527,6 +585,35 @@
 
 
     $(document).bind( "pagecontainershow", function( event ) {
+
+
+        $('.yo').on('click', function(event){
+            event.stopImmediatePropagation();
+
+            var $this = $(this);
+
+            $('.tht-img').attr('src','../img/Tierbilder/' + $this.attr('id')+'.png');
+            $('.tht-img').css('width','76%');
+
+        });
+
+
+
+
+        $("#owl-example").owlCarousel(
+                {
+                    itemsMobile:[1,5],
+                    slideSpeed:	200,
+                    touchDrag:true,
+
+                    baseClass : "owl-carousel",
+                    theme : "owl-theme",
+                    pagination: false,
+                    loop:true
+
+                }
+        );
+
 
         $('#share-button').hide();
         $('#play-button').hide();
