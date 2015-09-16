@@ -12,6 +12,7 @@
     <author email="brainjay@gmail.com">
     </author>
     <preference name="Fullscreen" value="true" />
+    <preference name="android-minSdkVersion" value="14" />
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />

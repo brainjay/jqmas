@@ -14,6 +14,7 @@
     <script src="../lib/jquery-mobile/js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
     <script src="../lib/swiper/dist/js/swiper.jquery.min.js"></script>
     <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../lib/jquery.cloudinary.js"></script>
 
     <title>Pfotenhilfe</title>
 
@@ -209,7 +210,7 @@
                 <div class="ui-grid-solo">
                     <div class="ui-block-a">
                         <div>
-                            <img id="gift-go" src="../img/icons/button-jetzt-spenden-und-schenken.png" class="gift-schenken">
+                            <img id="gift-go" src="../img/icons/button-jetzt-spenden-und-schenken.png" class="gift-schenken" from-page="">
                         </div>
                     </div>
                 </div>
@@ -222,11 +223,12 @@
                 <div class='overlay-back'><img id="over-back-btn" src="../img/icons/back.png"></div>
 
 
-                <video muted id="bgvid">
+                <video muted id="bgvid" webkit-playsinline>
                     <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-                    <source id="video1" src="../Videos/leckerchen.m4v">
+                    <source id="video1" src="http://res.cloudinary.com/jqmas/video/upload/v1442421122/spazieren_n3sqrs.mov">
                     Your browser doesn't support video
                 </video>
+
                 <button class="myPlayButton" id="play-btn"><img class="pla" src="../img/icons/play-button.png" ></button>
                 <button class="share-replay" id="play-button"><img class="img-replay" src="../img/Icons-neu-2/button-nochmal-anbspielen.png" ></button>
                 <button class="share-replay" id="share-button"><img class="img-share" src="../img/Icons-neu-2/button-video-teilen.png" ></button>
@@ -584,6 +586,29 @@
             $('#page3').show();
             $('#video4').show();
 
+            if($(this).attr('from-page') == 'spielen'){
+                $('#bgvid').find('#video1').attr('src','http://res.cloudinary.com/jqmas/video/upload/v1442421124/spielen_qojeil.mov');
+
+            }else if($(this).attr('from-page') == 'futter'){
+                $('#bgvid').find('#video1').attr('src','http://res.cloudinary.com/jqmas/video/upload/v1442420328/futter_aasr7l.mp4');
+
+            }else if($(this).attr('from-page') == 'spazieren'){
+                $('#bgvid').find('#video1').attr('src','http://res.cloudinary.com/jqmas/video/upload/v1442421122/spazieren_n3sqrs.mov');
+
+            }else if($(this).attr('from-page') == 'leckerchen'){
+                $('#bgvid').find('#video1').attr('src','http://res.cloudinary.com/jqmas/video/upload/v1442421124/Leckerchen_pr0edi.mov');
+
+            }else if($(this).attr('from-page') == 'streicheln') {
+
+                $('#bgvid').find('#video1').attr('src','http://res.cloudinary.com/jqmas/video/upload/v1442421124/streicheln_iplzoy.mov');
+
+
+            }else if($(this).attr('from-page') == 'keins'){
+                alert('no video');
+            }
+            $('#bgvid').load();
+
+
         });
 
         $(document).on('click', '#over-back-btn', function(event){
@@ -609,6 +634,7 @@
                         "ut labore et dolore magna aliquyam erat, sed diam volup");
                 $('#img-gift').attr('src','../img/icons/spielen.png');
                 $('#img-gift').css('width','128.5px');
+                $('#gift-go').attr('from-page','spielen');
 
             }else if($(this).attr('toRemove') == 'wasser'){
                 $('#gift-title').text("Möchtest du Wasser schenken?");
@@ -617,6 +643,7 @@
                         "ut labore et dolore magna aliquyam erat, sed diam volup");
                 $('#img-gift').attr('src','../img/icons/wasser.png');
                 $('#img-gift').css('width','114px');
+                $('#gift-go').attr('from-page','keins');
 
             }else if($(this).attr('toRemove') == 'plaster'){
                 $('#gift-title').text("Möchtest du Pflaster schenken?");
@@ -625,6 +652,7 @@
                         "ut labore et dolore magna aliquyam erat, sed diam volup");
                 $('#img-gift').attr('src','../img/icons/pflaster.png');
                 $('#img-gift').css('width','127px');
+                $('#gift-go').attr('from-page','keins');
             }
 
 
@@ -644,6 +672,7 @@
                         "ut labore et dolore magna aliquyam erat, sed diam volup");
                 $('#img-gift').attr('src','../img/icons/streicheln.png');
                 $('#img-gift').css('width','153.5px');
+                $('#gift-go').attr('from-page','streicheln');
 
             }else if($(this).attr('toRemove') == 'leckerchen'){
                 $('#gift-title').text("Möchtest du leckerchen schenken?");
@@ -652,6 +681,7 @@
                         " Mit diesem Geld können sie neues Futter kaufen und die Tiere versorgen.");
                 $('#img-gift').attr('src','../img/icons/leckerchen.png');
                 $('#img-gift').css('width','155px');
+                $('#gift-go').attr('from-page','leckerchen');
 
             }else if($(this).attr('toRemove') == 'medikamente'){
                 $('#gift-title').text("Möchtest du Medikamente schenken?");
@@ -661,6 +691,7 @@
                         "ut labore et dolore magna aliquyam erat, sed diam volup");
                 $('#img-gift').attr('src','../img/icons/medikamente.png');
                 $('#img-gift').css('width','144px');
+                $('#gift-go').attr('from-page','keins');
             }
         });
 
@@ -679,6 +710,7 @@
                         "ut labore et dolore magna aliquyam erat, sed diam volup");
                 $('#img-gift').attr('src','../img/icons/spazieren-gehen.png');
                 $('#img-gift').css('width','120px');
+                $('#gift-go').attr('from-page','spazieren');
 
             }else if($(this).attr('toRemove') == 'futter'){
                 $('#gift-title').text("Möchtest du Futter schenken?");
@@ -687,6 +719,7 @@
                         "ut labore et dolore magna aliquyam erat, sed diam volup");
                 $('#img-gift').attr('src','../img/icons/futter.png');
                 $('#img-gift').css('width','113px');
+                $('#gift-go').attr('from-page','futter');
 
             }else if($(this).attr('toRemove') == 'impfung'){
                 $('#gift-title').text("Möchtest du Impfungen schenken?");
@@ -695,6 +728,7 @@
                         "ut labore et dolore magna aliquyam erat, sed diam volup");
                 $('#img-gift').attr('src','../img/icons/impfung.png');
                 $('#img-gift').css('width','127.5px');
+                $('#gift-go').attr('from-page','keins');
             }
         });
 
@@ -712,6 +746,7 @@
                         "ut labore et dolore magna aliquyam erat, sed diam volup");
                 $('#img-gift').attr('src','../img/icons/versorgen.png');
                 $('#img-gift').css('width','81.5px');
+                $('#gift-go').attr('from-page','keins');
 
             }else if($(this).attr('toRemove') == 'schlafplatz'){
                 $('#gift-title').text("Möchtest du Wasser schenken?");
@@ -720,6 +755,7 @@
                         "ut labore et dolore magna aliquyam erat, sed diam volup");
                 $('#img-gift').attr('src','../img/icons/schlafplatz.png');
                 $('#img-gift').css('width','208px');
+                $('#gift-go').attr('from-page','keins');
 
             }else if($(this).attr('toRemove') == 'operation'){
                 $('#gift-title').text("Möchtest du Operation schenken?");
@@ -728,6 +764,7 @@
                         "ut labore et dolore magna aliquyam erat, sed diam volup");
                 $('#img-gift').attr('src','../img/icons/operation.png');
                 $('#img-gift').css('width','142px');
+                $('#gift-go').attr('from-page','keins');
             }
 
         });

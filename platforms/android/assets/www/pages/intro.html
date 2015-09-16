@@ -9,12 +9,13 @@
     <link rel="stylesheet" type="text/css" href="../css/index.css">
     <link rel="stylesheet" type="text/css" href="../lib/swiper/dist/css/swiper.min.css">
 
-
     <link rel="stylesheet" type="text/css" href="../lib/jquery-mobile/css/jquery.mobile-1.4.5.min.css">
     <script src="../lib/jquery/js/jquery-2.1.4.min.js" type="text/javascript"></script>
     <script src="../lib/jquery-mobile/js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
     <script src="../lib/swiper/dist/js/swiper.jquery.min.js"></script>
     <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../lib/jquery.cloudinary.js"></script>
+
     <title>Pfotenhilfe</title>
 
 </head>
@@ -69,7 +70,7 @@
                             </p>
                         </div>
                         <div class="ui-grid-b">
-                            <a href="#menue" class="ui-shadow ui-btn no-margin btn-goto-menu"></a>
+                            <a id="back-home1" href="#menue" class="ui-shadow ui-btn no-margin btn-goto-menu"></a>
                         </div>
 
                     </div>
@@ -119,7 +120,7 @@
 
     <div data-role="page" id="schenken-und-spenden" class="bg-dog">
         <div data-add-back-btn="true" data-rel="back" data-role="header" class="custom-header">
-            <a href="#menue" class="ui-btn ui-icon-myapp-menu ui-btn-icon-notext">Home</a>
+            <a id="back-home2" href="#menue" class="ui-btn ui-icon-myapp-menu ui-btn-icon-notext">Home</a>
             <h1 class="no-margin">schenken und spenden</h1>
         </div>
 
@@ -141,28 +142,102 @@
     <div data-role="page" id="z-u-b" toRemove="bg-dog" class="bg-dog">
         <div data-role="header" class="custom-header">
             <div data-add-back-btn="true" data-rel="back" data-role="header" class="custom-header">
-                <a href="#menue" class="ui-btn ui-icon-myapp-menu ui-btn-icon-notext">Home</a>
+                <a id="back-home3" href="#menue" class="ui-btn ui-icon-myapp-menu ui-btn-icon-notext">Home</a>
                 <h1 id="sub-title" class="no-margin">zeit und bewegung</h1>
             </div>
         </div>
 
-        <div data-role="main" class="ui-content content" id="main-zub">
-            <div class="ui-grid-a">
-                <div id="z-eins" class="ui-block-a">
-                    <a id="z-btn-eins" toRemove="spielen" class="ui-shadow ui-btn spielen no-margin"></a>
+        <div id="page1">
+            <div data-role="main" class="ui-content content" id="main-zub">
+                <div class="ui-grid-a">
+                    <div id="z-eins" class="ui-block-a">
+                        <a id="z-btn-eins" toRemove="spielen" class="ui-shadow ui-btn spielen no-margin"></a>
+                    </div>
+                    <div id="z-zwei" class="ui-block-b">
+                        <a id="z-btn-zwei" toRemove="streicheln" class="ui-shadow ui-btn streicheln no-margin"></a>
+                    </div>
+                    <div id="z-drei" class="ui-block-a">
+                        <a id="z-btn-drei" toRemove="spazieren" class="ui-shadow ui-btn spazieren no-margin"></a>
+                    </div>
+                    <div id="z-vier" class="ui-block-b">
+                        <a id="z-btn-vier" toRemove="versorgen" class="ui-shadow ui-btn versorgen no-margin"></a>
+                    </div>
+                </div><!-- /grid-a -->
+            </div><!-- /main -->
+        </div>
+
+        <div id="page2">
+            <div data-role="main" class="ui-content content" id="main-page2">
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a">
+                        <a href="#main-zub"><img id="back-btn" src="../img/icons/back.png"></a>
+                    </div>
                 </div>
-                <div id="z-zwei" class="ui-block-b">
-                    <a id="z-btn-zwei" toRemove="streicheln" class="ui-shadow ui-btn streicheln no-margin"></a>
+                <!-- Image-->
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a">
+                        <div>
+                            <img id="img-gift" src="../img/icons/wasser.png" class="gift-leckerchen">
+                        </div>
+                    </div>
                 </div>
-                <div id="z-drei" class="ui-block-a">
-                    <a id="z-btn-drei" toRemove="spazieren" class="ui-shadow ui-btn spazieren no-margin"></a>
+                <!-- Title -->
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a">
+                        <div id="gift-title" class="gift-leckerchen-title">
+                            MÖCHTEST DU
+                            LECKERCHEN SCHENKEN?
+                        </div>
+                    </div>
                 </div>
-                <div id="z-vier" class="ui-block-b">
-                    <a id="z-btn-vier" toRemove="versorgen" class="ui-shadow ui-btn versorgen no-margin"></a>
+
+                <!-- text -->
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a">
+                        <div id="gift-text" class="gift-text">
+                        </div>
+                    </div>
                 </div>
-            </div><!-- /grid-a -->
-        </div><!-- /main -->
-        <div data-role="footer" data-theme="c" data-position="fixed" class="zub-footer">
+                <!-- text 2-->
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a">
+                        <div id="subtitle" class="gift-subtitle">
+                            Schenke jetzt und schau was passiert!
+                        </div>
+                    </div>
+                </div>
+                <!-- button -->
+                <div class="ui-grid-solo">
+                    <div class="ui-block-a">
+                        <div>
+                            <img id="gift-go" src="../img/icons/button-jetzt-spenden-und-schenken.png" class="gift-schenken" from-page="">
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /main -->
+        </div><!--/page2 -->
+
+        <div id="page3">
+            <div data-role="main" class="ui-content content" id="main-page3">
+                <div class='overlay-back'><img id="over-back-btn" src="../img/icons/back.png"></div>
+
+
+                <video muted id="bgvid" webkit-playsinline>
+                    <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+                    <source id="video1" src="http://res.cloudinary.com/jqmas/video/upload/v1442421122/spazieren_n3sqrs.mov">
+                    Your browser doesn't support video
+                </video>
+
+                <button class="myPlayButton" id="play-btn"><img class="pla" src="../img/icons/play-button.png" ></button>
+                <button class="share-replay" id="play-button"><img class="img-replay" src="../img/Icons-neu-2/button-nochmal-anbspielen.png" ></button>
+                <button class="share-replay" id="share-button"><img class="img-share" src="../img/Icons-neu-2/button-video-teilen.png" ></button>
+
+
+            </div><!-- /main -->
+        </div><!-- /page3 -->
+
+        <div id="video-footer" data-role="footer" data-theme="c" data-position="fixed" class="zub-footer">
             <div data-role="navbar" data-theme="c" class="h1-zub">
                 <ul>
                     <li><a style="border-style:none; background-color: transparent;"><img id="zub-img" src="../img/icons/icon-zeit-und-bewegung-ohne-text.png" style="width: 48%"></a></li>
@@ -173,6 +248,97 @@
         </div><!-- /footer -->
     </div>
 </div> <!-- container end -->
+
+<script>
+    function restart() {
+        var video = document.getElementById("bgvid");
+
+        if(!video.paused){
+            video.pause();
+            video.currentTime = 0.0;
+            $('#play-btn').css('opacity','1');
+            $('#video-footer').show();
+            $('#play-button').hide();
+            $('#share-button').hide();
+
+        }else{
+            video.currentTime = 0.0;
+            $('#play-button').hide();
+            $('#share-button').hide();
+            $('#play-btn').css('opacity','1');
+            $('#play-btn').show();
+        }
+
+    }
+
+    var vid = document.getElementById("bgvid");
+    var pauseButton = document.querySelector("#play-btn");
+    var player = document.querySelector("#play-button");
+
+
+    function vidFade() {
+        vid.classList.add("stopfade");
+    }
+
+    vid.addEventListener('ended', function()
+    {
+        var pauseButton = document.querySelector("#play-btn");
+// only functional if "loop" is removed
+        vid.pause();
+// to capture IE10
+        vidFade();
+        $('#video-footer').show();
+        $(pauseButton).hide();
+
+        var sharebutton = document.querySelector("#share-button");
+        var playbutton = document.querySelector("#play-button");
+
+        $(sharebutton).show();
+        $(playbutton).show();
+
+    });
+
+ /*   document.getElementById('bgvid').addEventListener('ended',myHandler,false);
+    function myHandler(e) {
+        $('#play-btn').css('opacity','1');
+    }*/
+
+
+    pauseButton.addEventListener("click", function() {
+
+        if (vid.paused) {
+            vid.play();
+            $('#play-btn').css('opacity','0');
+            $('#video-footer').hide();
+
+        } else {
+            vid.pause();
+            $('#play-btn').css('opacity','1');
+            $('#video-footer').show();
+
+        }
+    })
+
+
+    player.addEventListener("click", function() {
+        var vid = document.getElementById("bgvid");
+        if (vid.paused) {
+            vid.play();
+            $('#play-btn').css('opacity', '0');
+            $('#share-button').hide();
+            $('#play-button').hide();
+            $('#video-footer').hide();
+            $('#play-btn').show();
+
+        } else {
+            vid.pause();
+            $('#play-btn').css('opacity', '1');
+            $('#video-footer').show();
+
+        }
+    });
+
+</script>
 
 
 <script>
@@ -362,12 +528,268 @@
 
     $(document).bind( "pagecontainershow", function( event ) {
 
+        $('#share-button').hide();
+        $('#play-button').hide();
+
+        $(document).on('click','#share-button', function(event){
+            event.stopImmediatePropagation();
+            alert('share not yet implemented')
+        });
+
+        $(document).on('click','#play-button', function(event){
+            event.stopImmediatePropagation();
+            var vid = document.getElementById("bgvid");
+
+            if (vid.paused) {
+                vid.play();
+                $('#play-btn').css('opacity','0');
+                $('#video-footer').hide();
+                $('#share-button').hide();
+                $('#play-button').hide();
+
+            }else{
+                $('#play-btn').show();
+            }
+        });
+
+        $(function () {
+
+            $("#bgvid").bind("loadedmetadata", function () {
+                var width = this.videoWidth;
+                var height = this.videoHeight;
+                // ...alert()
+                //alert(width);
+
+            });
+
+        });
+
+
+
+        $(document).on('click','#back-home1', function(){
+            restart();
+        });
+
+        $(document).on('click','#back-home2', function(){
+            restart();
+        });
+
+        $(document).on('click','#back-home3', function(){
+            restart();
+        });
+
+
+        $(document).on('click', '#gift-go', function(event){
+            event.stopImmediatePropagation();
+            restart();
+            $('#page2').hide();
+            $('#page3').show();
+            $('#video4').show();
+
+            if($(this).attr('from-page') == 'spielen'){
+                $('#bgvid').find('#video1').attr('src','http://res.cloudinary.com/jqmas/video/upload/v1442421124/spielen_qojeil.mov');
+
+            }else if($(this).attr('from-page') == 'futter'){
+                $('#bgvid').find('#video1').attr('src','http://res.cloudinary.com/jqmas/video/upload/v1442420328/futter_aasr7l.mp4');
+
+            }else if($(this).attr('from-page') == 'spazieren'){
+                $('#bgvid').find('#video1').attr('src','http://res.cloudinary.com/jqmas/video/upload/v1442421122/spazieren_n3sqrs.mov');
+
+            }else if($(this).attr('from-page') == 'leckerchen'){
+                $('#bgvid').find('#video1').attr('src','http://res.cloudinary.com/jqmas/video/upload/v1442421124/Leckerchen_pr0edi.mov');
+
+            }else if($(this).attr('from-page') == 'streicheln') {
+
+                $('#bgvid').find('#video1').attr('src','http://res.cloudinary.com/jqmas/video/upload/v1442421124/streicheln_iplzoy.mov');
+
+
+            }else if($(this).attr('from-page') == 'keins'){
+                alert('no video');
+            }
+            $('#bgvid').load();
+
+
+        });
+
+        $(document).on('click', '#over-back-btn', function(event){
+            event.stopImmediatePropagation();
+            restart();
+            $('#page3').hide();
+            $('#page2').show();
+
+        });
+
+        $(document).on('click', '#z-btn-eins', function(event){
+            event.stopImmediatePropagation();
+            restart();
+            $('#page2').show();
+            $('#page1').hide();
+
+
+            if($(this).attr('toRemove') == 'spielen'){
+
+                $('#gift-title').text("Möchtest du spielen schenken?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/spielen.png');
+                $('#img-gift').css('width','128.5px');
+                $('#gift-go').attr('from-page','spielen');
+
+            }else if($(this).attr('toRemove') == 'wasser'){
+                $('#gift-title').text("Möchtest du Wasser schenken?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/wasser.png');
+                $('#img-gift').css('width','114px');
+                $('#gift-go').attr('from-page','keins');
+
+            }else if($(this).attr('toRemove') == 'plaster'){
+                $('#gift-title').text("Möchtest du Pflaster schenken?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/pflaster.png');
+                $('#img-gift').css('width','127px');
+                $('#gift-go').attr('from-page','keins');
+            }
+
+
+        });
+
+        $(document).on('click', '#z-btn-zwei', function(event){
+            event.stopImmediatePropagation();
+            restart();
+            $('#page2').show();
+            $('#page1').hide();
+
+            if($(this).attr('toRemove') == 'streicheln'){
+
+                $('#gift-title').text("Möchtest du streicheln schenken?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/streicheln.png');
+                $('#img-gift').css('width','153.5px');
+                $('#gift-go').attr('from-page','streicheln');
+
+            }else if($(this).attr('toRemove') == 'leckerchen'){
+                $('#gift-title').text("Möchtest du leckerchen schenken?");
+                $('#gift-text').text("Wenn du ein Leckerchen schenkst, " +
+                        "spendest du damit 5 Euro an das Tierheim Berg." +
+                        " Mit diesem Geld können sie neues Futter kaufen und die Tiere versorgen.");
+                $('#img-gift').attr('src','../img/icons/leckerchen.png');
+                $('#img-gift').css('width','155px');
+                $('#gift-go').attr('from-page','leckerchen');
+
+            }else if($(this).attr('toRemove') == 'medikamente'){
+                $('#gift-title').text("Möchtest du Medikamente schenken?");
+                $('#gift-title').css('width','190px');
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/medikamente.png');
+                $('#img-gift').css('width','144px');
+                $('#gift-go').attr('from-page','keins');
+            }
+        });
+
+
+        $(document).on('click', '#z-btn-drei', function(event){
+            event.stopImmediatePropagation();
+            restart();
+            $('#page2').show();
+            $('#page1').hide();
+
+            if($(this).attr('toRemove') == 'spazieren'){
+
+                $('#gift-title').text("Möchtest du spazieren gehen?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/spazieren-gehen.png');
+                $('#img-gift').css('width','120px');
+                $('#gift-go').attr('from-page','spazieren');
+
+            }else if($(this).attr('toRemove') == 'futter'){
+                $('#gift-title').text("Möchtest du Futter schenken?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/futter.png');
+                $('#img-gift').css('width','113px');
+                $('#gift-go').attr('from-page','futter');
+
+            }else if($(this).attr('toRemove') == 'impfung'){
+                $('#gift-title').text("Möchtest du Impfungen schenken?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/impfung.png');
+                $('#img-gift').css('width','127.5px');
+                $('#gift-go').attr('from-page','keins');
+            }
+        });
+
+        $(document).on('click', '#z-btn-vier', function(event){
+            event.stopImmediatePropagation();
+            restart();
+            $('#page2').show();
+            $('#page1').hide();
+
+            if($(this).attr('toRemove') == 'versorgen'){
+
+                $('#gift-title').text("Möchtest du versorgen schenken?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/versorgen.png');
+                $('#img-gift').css('width','81.5px');
+                $('#gift-go').attr('from-page','keins');
+
+            }else if($(this).attr('toRemove') == 'schlafplatz'){
+                $('#gift-title').text("Möchtest du Wasser schenken?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/schlafplatz.png');
+                $('#img-gift').css('width','208px');
+                $('#gift-go').attr('from-page','keins');
+
+            }else if($(this).attr('toRemove') == 'operation'){
+                $('#gift-title').text("Möchtest du Operation schenken?");
+                $('#gift-text').text("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
+                        "sed diam nonumy eirmod tempor invidunt " +
+                        "ut labore et dolore magna aliquyam erat, sed diam volup");
+                $('#img-gift').attr('src','../img/icons/operation.png');
+                $('#img-gift').css('width','142px');
+                $('#gift-go').attr('from-page','keins');
+            }
+
+        });
+
+        $(document).on('click', '#back-btn', function(event){
+            event.stopImmediatePropagation();
+            restart();
+            $('#page3').hide();
+            $('#page2').hide();
+            $('#page1').show();
+        });
+
         $(document).on('click', '#btn-popup', handler);
 
         $(document).on('click', '#z', function(event){
             event.stopImmediatePropagation();
 
             zub(0);
+            if ($('#page1').is(":hidden")){
+                restart();
+                $('#page3').hide();
+                $('#page2').hide();
+                $('#page1').show();
+            }
+
 
         });
 
@@ -375,6 +797,13 @@
             event.stopImmediatePropagation();
 
             nuw(0);
+            if ($('#page1').is(":hidden")){
+                restart();
+                $('#page3').hide();
+                $('#page2').hide();
+                $('#page1').show();
+            }
+
 
         });
 
@@ -382,6 +811,13 @@
             event.stopImmediatePropagation();
 
             gup(0);
+            if ($('#page1').is(":hidden")){
+                restart();
+                $('#page3').hide();
+                $('#page2').hide();
+                $('#page1').show();
+            }
+
 
         });
 
@@ -392,6 +828,13 @@
             event.stopImmediatePropagation();
 
             zub(1);
+            if ($('#page1').is(":hidden")){
+                restart();
+                $('#page3').hide();
+                $('#page2').hide();
+                $('#page1').show();
+            }
+
 
         });
 
@@ -399,6 +842,12 @@
             event.stopImmediatePropagation();
 
             nuw(1);
+            if ($('#page1').is(":hidden")){
+                restart();
+                $('#page3').hide();
+                $('#page2').hide();
+                $('#page1').show();
+            }
 
         });
 
@@ -406,17 +855,29 @@
             event.stopImmediatePropagation();
 
             gup(1);
+            if ($('#page1').is(":hidden")){
+                restart();
+                $('#page3').hide();
+                $('#page2').hide();
+                $('#page1').show();
+            }
 
         });
 
     } );
+
+    $(document).on('pagecreate', function () {
+
+        $('#page2').hide();
+        $('#page3').hide();
+    })
 
 </script>
 
 <!--############################### -->
 
 <script>
-    $(window).bind( 'orientationchange', function(e){
+ /*   $(window).bind( 'orientationchange', function(e){
         var orientation="portrait";
         if(window.orientation == -90 || window.orientation == 90) orientation = "landscape";
 
@@ -432,7 +893,7 @@
             default:
                 break;
         };
-    });
+    });*/
 </script>
 
 <script>
@@ -491,6 +952,7 @@
 
     }
 </script>
+
 
 
 <script type="text/javascript" src="cordova.js"></script>
