@@ -267,21 +267,26 @@
             <div class="tht-imgs"></div>
 
             <div id="owl-example" class="owl-carousel">
-                <div> <img class="yo" id="Walter" style="width: 100%" src="../img/Tierbilder/Walter.png"> </div>
-                <div> <img class="yo" id="Baily"style="width: 100%" src="../img/Tierbilder/Baily.png"> </div>
-                <div> <img class="yo" id="Fridolin"style="width: 100%" src="../img/Tierbilder/Fridolin.png"> </div>
-                <div> <img class="yo" id="Candy" style="width: 100%" src="../img/Tierbilder/Candy.png"> </div>
-                <div> <img class="yo" id="Oma"style="width: 100%" src="../img/Tierbilder/Oma.png"> </div>
-                <div> <img class="yo" id="Walter" style="width: 100%" src="../img/Tierbilder/Walter.png"> </div>
-                <div> <img class="yo" id="Baily"style="width: 100%" src="../img/Tierbilder/Baily.png"> </div>
-                <div> <img class="yo" id="Fridolin"style="width: 100%" src="../img/Tierbilder/Fridolin.png"> </div>
-                <div> <img class="yo" id="Candy" style="width: 100%" src="../img/Tierbilder/Candy.png"> </div>
-                <div> <img class="yo" id="Oma"style="width: 100%" src="../img/Tierbilder/Oma.png"> </div>
-                <div> <img class="yo" id="Walter" style="width: 100%" src="../img/Tierbilder/Walter.png"> </div>
-                <div> <img class="yo" id="Baily"style="width: 100%" src="../img/Tierbilder/Baily.png"> </div>
-                <div> <img class="yo" id="Fridolin"style="width: 100%" src="../img/Tierbilder/Fridolin.png"> </div>
-                <div> <img class="yo" id="Candy" style="width: 100%" src="../img/Tierbilder/Candy.png"> </div>
-                <div> <img class="yo" id="Oma"style="width: 100%" src="../img/Tierbilder/Oma.png"> </div>
+                <div class="dog"> <img class="yo"  id="Walter" style="width: 100%" src="../img/Tierbilder/Walter.png"> </div>
+                <div class="dog"> <img class="yo" art="dog" id="Baily"style="width: 100%" src="../img/Tierbilder/Baily.png"> </div>
+                <div class="rabbit"> <img class="yo"  id="Fridolin"style="width: 100%" src="../img/Tierbilder/Fridolin.png"> </div>
+                <div class="cat"> <img class="yo"  id="Candy" style="width: 100%" src="../img/Tierbilder/Candy.png"> </div>
+                <div class="cat"> <img class="yo"  id="Oma"style="width: 100%" src="../img/Tierbilder/Oma.png"> </div>
+                <div class="dog"> <img class="yo"  id="Walter" style="width: 100%" src="../img/Tierbilder/Walter.png"> </div>
+                <div class="dog"> <img class="yo" art="dog" id="Baily"style="width: 100%" src="../img/Tierbilder/Baily.png"> </div>
+                <div class="rabbit"> <img class="yo"  id="Fridolin"style="width: 100%" src="../img/Tierbilder/Fridolin.png"> </div>
+                <div class="cat"> <img class="yo"  id="Candy" style="width: 100%" src="../img/Tierbilder/Candy.png"> </div>
+                <div class="cat"> <img class="yo"  id="Oma"style="width: 100%" src="../img/Tierbilder/Oma.png"> </div>
+                <div class="dog"> <img class="yo"  id="Walter" style="width: 100%" src="../img/Tierbilder/Walter.png"> </div>
+                <div class="dog"> <img class="yo" art="dog" id="Baily"style="width: 100%" src="../img/Tierbilder/Baily.png"> </div>
+                <div class="rabbit"> <img class="yo"  id="Fridolin"style="width: 100%" src="../img/Tierbilder/Fridolin.png"> </div>
+                <div class="cat"> <img class="yo"  id="Candy" style="width: 100%" src="../img/Tierbilder/Candy.png"> </div>
+                <div class="cat"> <img class="yo"  id="Oma"style="width: 100%" src="../img/Tierbilder/Oma.png"> </div>
+                <div class="dog"> <img class="yo"  id="Walter" style="width: 100%" src="../img/Tierbilder/Walter.png"> </div>
+                <div class="dog"> <img class="yo" art="dog" id="Baily"style="width: 100%" src="../img/Tierbilder/Baily.png"> </div>
+                <div class="rabbit"> <img class="yo"  id="Fridolin"style="width: 100%" src="../img/Tierbilder/Fridolin.png"> </div>
+                <div class="cat"> <img class="yo"  id="Candy" style="width: 100%" src="../img/Tierbilder/Candy.png"> </div>
+                <div class="cat"> <img class="yo"  id="Oma"style="width: 100%" src="../img/Tierbilder/Oma.png"> </div>
 
             </div>
 
@@ -597,7 +602,54 @@
 
         });
 
+        $(document).on('click', '#cat-img', function(e){
+            e.stopImmediatePropagation();
+            $('div .dog').hide();
+            $('div .rabbit').hide();
+            $('div .cat').show();
 
+            $('#cat-img').attr('src=',"../img/icons/katze-farbe.png");
+            $('#all-img').attr('src=',"../img/icons/alle-tiere.png");
+            $('#rabbit-img').attr('src=',"../img/icons/kleintiere.png");
+            $('#dog-img').attr('src=',"../img/icons/hund.png");
+
+
+        });
+
+        $(document).on('click', '#dog-img', function(e){
+            e.stopImmediatePropagation();
+            $('div .dog').show();
+            $('div .rabbit').hide();
+            $('div .cat').hide();
+            $('#cat-img').attr('src',"../img/icons/katze.png");
+            $('#all-img').attr('src',"../img/icons/alle-tiere.png");
+            $('#rabbit-img').attr('src',"../img/icons/kleintiere.png");
+            $('#dog-img').attr('src',"../img/icons/hund-farbe.png");
+        });
+
+        $(document).on('click', '#rabbit-img', function(e){
+            e.stopImmediatePropagation();
+            $('div .dog').hide();
+            $('div .rabbit').show();
+            $('div .cat').hide();
+
+            $('#cat-img').attr('src',"../img/icons/katze.png");
+            $('#all-img').attr('src',"../img/icons/alle-tiere.png");
+            $('#rabbit-img').attr('src',"../img/icons/kleintiere-farbe.png");
+            $('#dog-img').attr('src',"../img/icons/hund.png");
+        });
+
+        $(document).on('click', '#all-img', function(e){
+            e.stopImmediatePropagation();
+            $('div .dog').show();
+            $('div .rabbit').show();
+            $('div .cat').show();
+
+            $('#cat-img').attr('src',"../img/icons/katze.png");
+            $('#all-img').attr('src',"../img/icons/alle-tiere-farbe.png");
+            $('#rabbit-img').attr('src',"../img/icons/kleintiere.png");
+            $('#dog-img').attr('src',"../img/icons/hund.png");
+        });
 
 
         $("#owl-example").owlCarousel(
