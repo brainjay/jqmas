@@ -1694,6 +1694,22 @@ a:visited:hover{color:transparent!important }
     margin: 12px 12px;
 }
 
+.patentier-txt{
+    width: 345px;
+    color: white;
+    text-shadow: none;
+    font-family: FiraSans-Light;
+    text-transform: none;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.img-paten{
+    width: 50%;
+    display: block;
+    margin: 25px auto;
+}
+
 
 
 
@@ -1745,16 +1761,48 @@ video {
     margin-top: 128px;
 }
 
+.h1-so-ge{
+    font-family: FiraSans-Light;
+    color: white;
+    text-transform: none;
+    font-size: xx-large;
+}
+
 .img-share{
     width: 80%;
     margin-bottom: 128px;
 }
 
+.line{
+    width: 90%;
+    border-color: white;
+    border-width: 1px;
+}
+
+.so-ge{
+    width: 301px;
+    display: block;
+    margin: 0 auto 8px;
+    text-align: center;
+    font-family: FiraSans-Light;
+    color: white;
+    text-transform: none;
+}
 
 .pla{
     width: 25%;
 }
 
+
+.thb-txt{
+    width: 320px;
+    display: block;
+    margin: 25px auto;
+    color: white;
+    text-shadow: none;
+    font-family: FiraSans-Light;
+    text-transform: none;
+}
 
 .ui-overlay-a{background-color: #000;}
 .ui-overlay-b{background-color: #000;}
