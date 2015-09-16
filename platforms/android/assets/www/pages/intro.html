@@ -228,7 +228,7 @@
                 <div class='overlay-back'><img id="over-back-btn" src="../img/icons/back.png"></div>
 
 
-                <video muted id="bgvid" webkit-playsinline>
+                <video muted id="bgvid" webkit-playsinline poster="../img/Screenshots/spazieren.jpg">
                     <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
                     <source id="video1" src="http://res.cloudinary.com/jqmas/video/upload/v1442421122/spazieren_n3sqrs.mov">
                     Your browser doesn't support video
@@ -357,19 +357,32 @@
 
         <div data-role="main" class="ui-content content" id="main-mp">
             <div class="ui-grid-solo">
-                <img class="img-paten" src="../img/Tierbilder/Candy-Outline.png">
-            </div>
-            <div class="ui-grid-solo">
                 <p class="patentier-txt">
-                    Wie in jedem Tierheim gibt es auch im Tierheim Berg schwer ver-
-                    mittelbare Tiere. Deshalb suchen wir Tierfreunde, die vielleicht
+                    Wie in jedem Tierheim gibt es auch im Tierheim Berg schwer
+                    vermittelbare Tiere. Deshalb suchen wir Tierfreunde, die vielleicht
                     selbst kein Tier halten können, aber Gutes tun wollen.</p>
 
-                <p class="patentier-txt">Wenn du eine Patenschaft übernehmen willst such dir symbo-
-                    lisch eines der folgenden Tiere aus. Von diesem Tier bekommst
+                <p class="patentier-txt">Wenn du eine Patenschaft übernehmen willst such dir
+                    symbolisch eines der folgenden Tiere aus. Von diesem Tier bekommst
                     du dann Wöchentlich eine kleine Nachricht, ein Bilder oder ein
                     Video damit du weißt wie es ihm geht.</p>
 
+            </div>
+
+            <div class="ui-grid-solo">
+                <img class="img-paten" src="../img/Mein-Patentier/Patentier-Paula.png">
+            </div>
+
+            <hr noshade size="1" class="line">
+
+            <div class="ui-grid-solo">
+                <img class="img-paten" src="../img/Mein-Patentier/Patentier-Jenti.png">
+            </div>
+
+            <hr noshade size="1" class="line">
+
+            <div class="ui-grid-solo">
+                <img class="img-paten" src="../img/Mein-Patentier/Patentier-Hanna.png">
             </div>
 
 
@@ -866,19 +879,24 @@
 
             if($(this).attr('from-page') == 'spielen'){
                 $('#bgvid').find('#video1').attr('src','http://res.cloudinary.com/jqmas/video/upload/v1442421124/spielen_qojeil.mov');
+                $('#bgvid').attr('poster',"../img/Screenshots/spielen.jpg");
 
             }else if($(this).attr('from-page') == 'futter'){
                 $('#bgvid').find('#video1').attr('src','http://res.cloudinary.com/jqmas/video/upload/v1442420328/futter_aasr7l.mp4');
+                $('#bgvid').attr('poster',"../img/Screenshots/futter.jpg");
 
             }else if($(this).attr('from-page') == 'spazieren'){
                 $('#bgvid').find('#video1').attr('src','http://res.cloudinary.com/jqmas/video/upload/v1442421122/spazieren_n3sqrs.mov');
+                $('#bgvid').attr('poster',"../img/Screenshots/spazieren.jpg");
 
             }else if($(this).attr('from-page') == 'leckerchen'){
                 $('#bgvid').find('#video1').attr('src','http://res.cloudinary.com/jqmas/video/upload/v1442421124/Leckerchen_pr0edi.mov');
+                $('#bgvid').attr('poster',"../img/Screenshots/Leckerchen.jpg");
 
             }else if($(this).attr('from-page') == 'streicheln') {
 
                 $('#bgvid').find('#video1').attr('src','http://res.cloudinary.com/jqmas/video/upload/v1442421124/streicheln_iplzoy.mov');
+                $('#bgvid').attr('poster',"../img/Screenshots/streicheln.jpg");
 
 
             }else if($(this).attr('from-page') == 'keins'){
