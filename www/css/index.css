@@ -654,6 +654,48 @@ h1 {
 
 }
 
+.cat{
+    float: left;
+    margin: 0 auto;
+    width: 120px;
+}
+
+.dog{
+    float: left;
+    margin: 0 auto;
+    width: 120px;
+}
+
+.fees{
+    width:65px;
+}
+
+.tht-img2{
+    width: 86%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: -24px;
+}
+
+.dogi{
+    float: left;
+    margin: 0 auto;
+    width: 75px;
+}
+
+
+#back-btn-2{
+    width: 30px;
+    margin: 12px 12px;
+}
+
+.rabbit{
+    float: left;
+    margin: 0 auto;
+    width: 120px;
+}
+
 .one{
     text-align: left;
 }
@@ -879,14 +921,7 @@ div.callout {
     display: block
 }
 
-.owl-item{
-    width: 90px !important;
-    margin-right: 15px !important;
-}
 
-.owl-wrapper{
-    margin-right: 15px !important;
-}
 
 .tht-img{
     width: 70%;
