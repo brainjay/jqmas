@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="263f9b1d-0bd3-4855-8ec7-02f7544a0cdb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/Tierbilder/Fee-1-klein-Text.png" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/android/assets/www/animationen-Starscreen/video-1440875666.mp4.mp4" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/android/assets/www/animationen-Starscreen/video-1440875690.mp4.mp4" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/android/assets/www/animationen-Starscreen/video-1440875721.mp4.mp4" afterPath="" />
@@ -40,23 +39,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/android/assets/www/spielen.mov" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/platforms/android/res/drawable-port-xdpi/screen.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/www/img/Tierbilder/Fee-5.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/img/Tierbilder/Fee-1.png" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/Tierbilder/Fee-1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/Tierbilder/Fee-1.png" afterPath="$PROJECT_DIR$/www/img/Tierbilder/Fee-1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/img/Tierbilder/Fee-2.png" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/Tierbilder/Fee-2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/Tierbilder/Fee-2.png" afterPath="$PROJECT_DIR$/www/img/Tierbilder/Fee-2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/img/Tierbilder/Fee-3.png" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/Tierbilder/Fee-3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/Tierbilder/Fee-3.png" afterPath="$PROJECT_DIR$/www/img/Tierbilder/Fee-3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/img/Tierbilder/Fee-4.png" afterPath="$PROJECT_DIR$/platforms/android/assets/www/img/Tierbilder/Fee-4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/Tierbilder/Fee-4.png" afterPath="$PROJECT_DIR$/www/img/Tierbilder/Fee-4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/css/index.css" afterPath="$PROJECT_DIR$/platforms/android/assets/www/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/index.css" afterPath="$PROJECT_DIR$/www/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/pages/intro.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/pages/intro.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/pages/intro.html" afterPath="$PROJECT_DIR$/www/pages/intro.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JQMAnimalShelter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,8 +83,8 @@
       <file leaf-file-name="intro.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/pages/intro.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6360424">
-              <caret line="271" column="67" selection-start-line="271" selection-start-column="67" selection-end-line="271" selection-end-column="67" />
+            <state vertical-scroll-proportion="0.9416961">
+              <caret line="820" column="52" selection-start-line="820" selection-start-column="52" selection-end-line="820" selection-end-column="52" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -871,8 +854,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/pages/intro.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6360424">
-          <caret line="271" column="67" selection-start-line="271" selection-start-column="67" selection-end-line="271" selection-end-column="67" />
+        <state vertical-scroll-proportion="0.9416961">
+          <caret line="820" column="52" selection-start-line="820" selection-start-column="52" selection-end-line="820" selection-end-column="52" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
