@@ -796,9 +796,30 @@
 
             console.log($('.tht-img').attr('showSubpage'))
 
-            if($('.tht-img').attr('showSubpage') == 'yes'){
+            if($('.tht-img').attr('src') == '../img/Tierbilder/Fee-gross.png' && $('.tht-img').attr('showSubpage') == 'yes' && $('#dog-img').attr('src') == '../img/icons/hund.png' && $('#fee-page').attr('style') == 'display:none;'){
                 $('#fee-page').hide();
                 $('#bla').show();
+            }else{
+                $('#bla').css('display','block');
+                $('#main-tht').css('margin-top','26px');
+                $('#cat-img').attr('src',"../img/icons/katze.png");
+                $('#all-img').attr('src',"../img/icons/alle-tiere-farbe.png");
+                $('#rabbit-img').attr('src',"../img/icons/kleintiere.png");
+                $('#dog-img').attr('src',"../img/icons/hund.png");
+
+                $('#tierheim-tiere').removeClass( $('#tierheim-tiere').attr('toremove') ).addClass('bg');
+                $('#tht-title').text('alle tiere');
+                $('.tht-img').attr('src','../img/Tierbilder/Fee-gross.png');
+
+                $('#tierheim-tiere').attr('toremove','bg');
+
+                $('.tht-img').attr('showSubpage','yes');
+
+                $('#cats').hide();
+                $('#rabbits').hide();
+                $('#dogs').hide();
+                $('#owl-example').show();
+                $('#main-tht').css('margin-top',"0")
             }
 
         });
