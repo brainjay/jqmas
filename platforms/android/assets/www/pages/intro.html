@@ -96,7 +96,7 @@
         <div data-role="main" class="ui-content content" id="main-menue">
 
             <div id="overlay"class="callout bottom">
-                <p id="popup-text">Mach uns ein Geschenk und hilf so dem Tierheim Berg</p>
+                <p id="popup-text" class="one">Mach uns ein Geschenk und<br> hilf so dem<br> Tierheim Berg</p>
                 <a id="btn-popup" who-is="one" class="ui-shadow ui-btn popup-btn">weiter</a>
             </div>
 
@@ -373,13 +373,13 @@
                 <img class="img-paten" src="../img/Mein-Patentier/Patentier-Paula.png">
             </div>
 
-            <hr noshade size="1" class="line">
+            <div class="line"></div>
 
             <div class="ui-grid-solo">
                 <img class="img-paten" src="../img/Mein-Patentier/Patentier-Jenti.png">
             </div>
 
-            <hr noshade size="1" class="line">
+            <div class="line"></div>
 
             <div class="ui-grid-solo">
                 <img class="img-paten" src="../img/Mein-Patentier/Patentier-Hanna.png">
@@ -405,7 +405,7 @@
                 und Pflege“ zur Auswahl.</p>
         </div>
 
-            <hr noshade size="1" class="line">
+            <div class="line"></div>
 
             <div class="ui-grid-solo" id="zwei-txt">
                 <p><h1 class="h1-so-ge">2.</h1></p>
@@ -416,7 +416,7 @@
                     und Pflege“ zur Auswahl.</p>
             </div>
 
-            <hr noshade size="1" class="line">
+            <div class="line"></div>
 
             <div class="ui-grid-solo" id="drei-txt">
                 <p><h1 class="h1-so-ge">3.</h1></p>
@@ -537,6 +537,7 @@
         if($(this).context.attributes[1].value == "one"){
 
             $("#popup-text").text("Hier kannst du alle Tiere besuchen, die aktuell in dem Tierheim wohnen");
+            $("#popup-text").removeClass('one').addClass('two');
             $("#eins").addClass('grey transparent');
             $("#zwei").removeClass('grey transparent');
             $(this).attr('who-is','two');
@@ -544,6 +545,7 @@
 
         }else if ($(this).context.attributes[1].value == "two"){
             $("#popup-text").text("Was das Tierheim Berg alles leistet erfährst du hier");
+            $("#popup-text").removeClass('two').addClass('three');
             $("#zwei").addClass('grey transparent');
             $("#drei").removeClass('grey transparent');
             $(this).attr('who-is','three');
@@ -551,6 +553,7 @@
 
         }else if ($(this).context.attributes[1].value == "three"){
             $("#popup-text").text("Hier kannst du genau nachlesen wie die App funktioniert");
+            $("#popup-text").removeClass('three').addClass('four two');
             $("#drei").addClass('grey transparent');
             $("#vier").removeClass('grey transparent');
             $(this).attr('who-is','four');
@@ -565,6 +568,7 @@
 
         }else if ($(this).context.attributes[1].value == "five"){
             $("#popup-text").text("Wenn du Pate werden willst schau hier vorbei!");
+            $("#popup-text").addClass('five').removeClass('four');
             $("#fuenf").addClass('grey transparent');
             $("#sechs").removeClass('grey transparent');
             $(this).attr('who-is','exit');
